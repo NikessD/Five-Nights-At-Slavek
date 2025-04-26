@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfcad8ott85by"
-path="res://.godot/imported/StageChick.png-d43e8d7968616f6b36d879205ade81f4.ctex"
+path="res://.godot/imported/StageChick.png-2278ba02d90f0f31f5674e8715bf4d90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/StageChick.png"
-dest_files=["res://.godot/imported/StageChick.png-d43e8d7968616f6b36d879205ade81f4.ctex"]
+source_file="res://animations/camera_stages/StageChick.png"
+dest_files=["res://.godot/imported/StageChick.png-2278ba02d90f0f31f5674e8715bf4d90.ctex"]
 
 [params]
 

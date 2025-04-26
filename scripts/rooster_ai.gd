@@ -7,7 +7,6 @@ class_name RoosterAi
 
 # Animatronic rooster var
 var animatronic_random_number = 3
-var animatronic_rooster_AI = 1
 var animatronic_rooster_camera = 1
 var game_over = 0
 var animatronic_rooster_door_var = 0
@@ -74,7 +73,7 @@ func _on_timer_rooster_timeout() -> void:
 	
 	print(animatronic_rooster_camera)
 	animatronic_random_number = randi_range(0, 20)
-	if animatronic_random_number <= animatronic_rooster_AI:
+	if animatronic_random_number <= GlobalVars.animatronic_rooster_AI :
 		match animatronic_rooster_camera:
 			1:
 				cam_1()

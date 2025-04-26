@@ -10,11 +10,12 @@ config_version=5
 
 [application]
 
-config/name="PNUS"
+config/name="FNAS"
 run/main_scene="uid://bwblblykw5b4u"
 config/features=PackedStringArray("4.4")
 run/max_fps=60
 boot_splash/show_image=false
+config/icon="uid://b471kuyokmikb"
 
 [audio]
 

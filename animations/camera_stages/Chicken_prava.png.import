@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3s2mxtdxcbc1"
-path="res://.godot/imported/Chicken_prava.png-58c6701b4dee242469df1b0c8fa98054.ctex"
+path="res://.godot/imported/Chicken_prava.png-10d2c6ed95fba4d8ed482c3a3d00a459.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/Chicken_prava.png"
-dest_files=["res://.godot/imported/Chicken_prava.png-58c6701b4dee242469df1b0c8fa98054.ctex"]
+source_file="res://animations/camera_stages/Chicken_prava.png"
+dest_files=["res://.godot/imported/Chicken_prava.png-10d2c6ed95fba4d8ed482c3a3d00a459.ctex"]
 
 [params]
 
