@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qqmo0ksn5qn5"
-path="res://.godot/imported/PohledLevaAnimace (1).png-465d7891392e8c9f74058a18ecb1136d.ctex"
+path="res://.godot/imported/PohledLevaAnimace (1).png-d5f0eabcd1d0f80dff78cd0165eb20f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/view_left/PohledLevaAnimace (1).png"
-dest_files=["res://.godot/imported/PohledLevaAnimace (1).png-465d7891392e8c9f74058a18ecb1136d.ctex"]
+source_file="res://animations/view_office_left/PohledLevaAnimace (1).png"
+dest_files=["res://.godot/imported/PohledLevaAnimace (1).png-d5f0eabcd1d0f80dff78cd0165eb20f1.ctex"]
 
 [params]
 

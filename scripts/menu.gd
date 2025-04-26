@@ -1,14 +1,41 @@
 extends Control
 
+
+func _ready() -> void:
+	var err = GlobalVars.config.load("res://save.cfg")	
+	if err == OK:
+		GlobalVars.night = GlobalVars.config.get_value("night number", "night")
+	
+	
 func _on_play_pressed() -> void:
+	load_night()
 	$Menu/Background/MenuStatic.stop()
 	$StartButtonSound.play()
-	$LoadingScreen/NightNumber.text = "NIGHT " + str(GlobalVars.night_number)
+	$LoadingScreen/NightNumber.text = "NIGHT " + str(GlobalVars.night)
 	$Menu.set_visible(false)
 	$LoadingScreen.set_visible(true)
 	await get_tree().create_timer(5).timeout
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 	$LoadingScreen/NightNumber
+	
+func load_night():
+	match GlobalVars.night:
+		1:
+			GlobalVars.golden_s_AI = 0
+			GlobalVars.animatronic_rooster_AI = 3
+		2:
+			GlobalVars.golden_s_AI = 1
+			GlobalVars.animatronic_rooster_AI = 5
+		3:
+			GlobalVars.golden_s_AI = 3
+			GlobalVars.animatronic_rooster_AI = 7
+		4:
+			GlobalVars.golden_s_AI = 4
+			GlobalVars.animatronic_rooster_AI = 9
+		5:
+			GlobalVars.golden_s_AI = 6
+			GlobalVars.animatronic_rooster_AI = 12
+	
 	
 func _on_options_pressed() -> void:
 	$Menu/ClickSound.play()

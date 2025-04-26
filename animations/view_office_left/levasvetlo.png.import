@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxq36xlrure2p"
-path="res://.godot/imported/levasvetlo.png-7708917c8ecacb868e13e6315356b484.ctex"
+path="res://.godot/imported/levasvetlo.png-ee020cf0c75751e3219ca1e0041a5315.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/view_left/levasvetlo.png"
-dest_files=["res://.godot/imported/levasvetlo.png-7708917c8ecacb868e13e6315356b484.ctex"]
+source_file="res://animations/view_office_left/levasvetlo.png"
+dest_files=["res://.godot/imported/levasvetlo.png-ee020cf0c75751e3219ca1e0041a5315.ctex"]
 
 [params]
 

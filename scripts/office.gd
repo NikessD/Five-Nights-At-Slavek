@@ -6,7 +6,7 @@ var head_position = "stred"
 
 # Animatronic var
 #var animatronic_random_number = 0
-#var animatronic_rooster_AI = 1
+#var GlobalVars.animatronic_rooster_AI  = 1
 #var animatronic_rooster_camera = 0
 var hour = 0
 var game_over = 0
@@ -21,7 +21,6 @@ var ominious_sound_number = 0
 # GoldenS var
 
 var GoldenS_random_number = 1
-var GoldenS_AI = 10
 var GoldenS_camera = 0
 var GoldenS_timer = 0
 var GoldenS_anger = 0
@@ -121,7 +120,7 @@ func _on_button_left_side_mouse_entered():
 #func _on_timer_rooster_timeout() -> void:
 	#animatronic_random_number = randi_range(0, 20)
 	#
-	#if animatronic_rooster_AI <= animatronic_random_number:
+	#if GlobalVars.animatronic_rooster_AI  <= animatronic_random_number:
 		#if animatronic_rooster_camera == 6 and GlobalVars.light_button_is_pressed == true:
 			#animatronic_rooster_camera += randi_range(-3,0)
 			#$RunningSound.play()
@@ -178,10 +177,10 @@ func _on_timer_hour_timeout() -> void:
 
 func _on_golden_s_timer_timeout() -> void:
 	GoldenS_camera = 0
-	GoldenS_random_number = randi_range(0, 10)
-	if GoldenS_random_number <= GoldenS_AI:
+	GoldenS_random_number = randi_range(0, 20)
+	if GoldenS_random_number <= GlobalVars.golden_s_AI:
 		GoldenS_camera = randi_range(0, 11)
-		GoldenS_timer = randi_range(80, 120) / GoldenS_AI
+		GoldenS_timer = randi_range(80, 120) / GlobalVars.golden_s_AI
 		await get_tree().create_timer(GoldenS_timer).timeout
 
 	else:

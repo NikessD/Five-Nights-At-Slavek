@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqj36ob86ewoh"
-path="res://.godot/imported/PohledPrava (8).png-2c52771bd5277215896a70debd0f8e41.ctex"
+path="res://.godot/imported/PohledPrava (8).png-897dbcf1779d92551b0ef7789fa44a40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/view_right/PohledPrava (8).png"
-dest_files=["res://.godot/imported/PohledPrava (8).png-2c52771bd5277215896a70debd0f8e41.ctex"]
+source_file="res://animations/view_office_right/PohledPrava (8).png"
+dest_files=["res://.godot/imported/PohledPrava (8).png-897dbcf1779d92551b0ef7789fa44a40.ctex"]
 
 [params]
 
