@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PNUS"
+run/main_scene="uid://bwblblykw5b4u"
+config/features=PackedStringArray("4.4")
+run/max_fps=60
+boot_splash/show_image=false
+
+[audio]
+
+buses/default_bus_layout="uid://cf4hpilf2ms0j"
+
+[autoload]
+
+GlobalVars="*res://scripts/global_vars.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=4
+window/stretch/mode="viewport"
+
+[file_customization]
+
+folder_colors={
+"res://KanclAnimace/": "orange",
+"res://Scripty/": "red",
+"res://Scény/": "purple",
+"res://Sprity/": "green",
+"res://Zvuky/": "pink",
+"res://animations/": "orange",
+"res://scenes/": "blue",
+"res://scripts/": "green",
+"res://sounds/": "purple",
+"res://sprites/": "pink"
+}

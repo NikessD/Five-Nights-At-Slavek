@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdqmog8wulpnd"]
+
+[ext_resource type="Script" uid="uid://b8rej42444r8e" path="res://scripts/loading_screen.gd" id="1_lb782"]
+
+[node name="Nacitaciobrazovka" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lb782")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 753.0
+offset_top = 416.0
+offset_right = -1089.0
+offset_bottom = -617.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="PanelContainer"]
+layout_mode = 2
+text = "NOC 1
+"
+editable = false
+virtual_keyboard_enabled = false
+wrap_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.985
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

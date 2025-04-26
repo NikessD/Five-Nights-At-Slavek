@@ -1,0 +1,253 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhqcnvyxjgoh1"]
+
+[ext_resource type="Script" uid="uid://d1wf8cprrctva" path="res://scripts/menu.gd" id="1_v86rl"]
+[ext_resource type="AudioStream" uid="uid://deyb8ve2gmluo" path="res://sounds/click-button-140881.mp3" id="2_13sgg"]
+[ext_resource type="AudioStream" uid="uid://byfsd0famoq8b" path="res://sounds/modern-button-click-291234.mp3" id="3_i6lef"]
+[ext_resource type="AudioStream" uid="uid://b5psk57q003qe" path="res://sounds/MenuStatic.mp3" id="4_70i5f"]
+[ext_resource type="Texture2D" uid="uid://b471kuyokmikb" path="res://sprites/PNUS_LOGO_Kreslicí plátno 1.png" id="5_mj5lg"]
+[ext_resource type="SystemFont" uid="uid://5qb10ktoyk30" path="res://styles/MenuFont.tres" id="6_ufwb2"]
+[ext_resource type="AudioStream" uid="uid://cr2upuxd6n6da" path="res://sounds/lazerius-139178.mp3" id="7_6cdou"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_11y2r"]
+
+[sub_resource type="Theme" id="Theme_o0tnf"]
+
+[sub_resource type="Theme" id="Theme_b6cxs"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aaywf"]
+
+[sub_resource type="SystemFont" id="SystemFont_11y2r"]
+font_names = PackedStringArray("LCD Solid")
+
+[sub_resource type="SystemFont" id="SystemFont_o0tnf"]
+font_names = PackedStringArray("LCD Solid")
+
+[sub_resource type="SystemFont" id="SystemFont_jmdev"]
+font_names = PackedStringArray("LCD Solid")
+
+[sub_resource type="SystemFont" id="SystemFont_aaywf"]
+font_names = PackedStringArray("LCD Solid")
+
+[node name="MainMenu" type="Control"]
+material = SubResource("CanvasItemMaterial_11y2r")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_o0tnf")
+script = ExtResource("1_v86rl")
+
+[node name="Menu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource("2_13sgg")
+volume_db = -36.243
+pitch_scale = 0.86
+bus = &"VFX"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource("3_i6lef")
+volume_db = -15.0
+pitch_scale = 0.86
+bus = &"VFX"
+
+[node name="Background" type="Control" parent="Menu"]
+light_mask = 2
+visibility_layer = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuStatic" type="AudioStreamPlayer" parent="Menu/Background"]
+stream = ExtResource("4_70i5f")
+volume_db = -12.609
+autoplay = true
+mix_target = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="Menu"]
+visibility_layer = 4
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 657.0
+offset_right = 277.0
+offset_bottom = 1040.0
+grow_vertical = 0
+theme = SubResource("Theme_b6cxs")
+alignment = 1
+
+[node name="Play" type="Button" parent="Menu/MenuButtons"]
+material = SubResource("CanvasItemMaterial_aaywf")
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_11y2r")
+theme_override_font_sizes/font_size = 50
+text = "START
+"
+flat = true
+
+[node name="Options" type="Button" parent="Menu/MenuButtons"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_o0tnf")
+theme_override_font_sizes/font_size = 50
+text = "OPTIONS"
+flat = true
+
+[node name="Quit" type="Button" parent="Menu/MenuButtons"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_jmdev")
+theme_override_font_sizes/font_size = 50
+text = "QUIT"
+flat = true
+
+[node name="FnasLogo" type="Sprite2D" parent="Menu"]
+position = Vector2(227.128, 290)
+scale = Vector2(0.834008, 0.834008)
+texture = ExtResource("5_mj5lg")
+
+[node name="VersionNumber" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 1792.0
+offset_top = 1053.0
+offset_right = 1918.0
+offset_bottom = 1076.0
+theme_override_fonts/font = ExtResource("6_ufwb2")
+text = "VER - 0.4.0"
+
+[node name="LoadingScreen" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NightNumber" type="Label" parent="LoadingScreen"]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 450.0
+offset_right = 1183.0
+offset_bottom = 551.0
+theme_override_fonts/font = SubResource("SystemFont_aaywf")
+theme_override_font_sizes/font_size = 100
+text = "NIGHT 1"
+
+[node name="StartButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6cdou")
+volume_db = -24.369
+pitch_scale = 0.75
+bus = &"VFX"
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 1011.0
+offset_right = 47.0
+offset_bottom = 1051.0
+
+[node name="Exit" type="Button" parent="Settings"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = -33.0
+offset_right = 222.0
+offset_bottom = 26.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("6_ufwb2")
+theme_override_font_sizes/font_size = 50
+text = "MENU
+"
+flat = true
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Settings"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -1011.0
+offset_right = 33.0
+offset_bottom = -971.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings"]
+layout_mode = 0
+offset_left = 599.0
+offset_top = -1011.0
+offset_right = 1264.0
+offset_bottom = 70.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_ufwb2")
+theme_override_font_sizes/font_size = 40
+text = "Master
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Master volume" type="HSlider" parent="Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.5
+step = 0.01
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_ufwb2")
+theme_override_font_sizes/font_size = 40
+text = "VFX
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VFX" type="HSlider" parent="Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.5
+step = 0.01
+value = 0.5
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_ufwb2")
+theme_override_font_sizes/font_size = 40
+text = "Ambience
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Ambience" type="HSlider" parent="Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.5
+step = 0.01
+value = 0.5
+tick_count = 11
+ticks_on_borders = true
+
+[connection signal="focus_entered" from="Menu/MenuButtons/Play" to="." method="_on_play_focus_entered"]
+[connection signal="mouse_entered" from="Menu/MenuButtons/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="Menu/MenuButtons/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Menu/MenuButtons/Options" to="." method="_on_options_mouse_entered"]
+[connection signal="pressed" from="Menu/MenuButtons/Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="Menu/MenuButtons/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="pressed" from="Menu/MenuButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="Settings/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="Settings/Exit" to="." method="_on_exit_pressed"]
+[connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/Master volume" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/VFX" to="." method="_on_vfx_value_changed"]
+[connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/Ambience" to="." method="_on_ambience_value_changed"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwja7wppt6ki4"]
+
+[ext_resource type="Script" uid="uid://n6bq2qax8afk" path="res://scripts/game_over_screen.gd" id="1_l37p8"]
+[ext_resource type="Texture2D" uid="uid://te56ylsaknsy" path="res://sprites/GameOverScreen_Kreslicí plátno 1.png" id="2_61w2s"]
+[ext_resource type="AudioStream" uid="uid://r3tpkqqvbmu4" path="res://sounds/GameOverSound.mp3" id="3_jw6e5"]
+
+[node name="GameOverScreen" type="Node2D"]
+script = ExtResource("1_l37p8")
+
+[node name="GameOverScreen" type="Sprite2D" parent="."]
+position = Vector2(961, 531)
+scale = Vector2(1.07725, 1.03889)
+texture = ExtResource("2_61w2s")
+
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 2.612
+one_shot = true
+autostart = true
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jw6e5")
+volume_db = -26.468
+
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_timer_timeout"]

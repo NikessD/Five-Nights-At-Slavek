@@ -1,0 +1,567 @@
+[gd_scene load_steps=46 format=3 uid="uid://dp1pppkrg6cqj"]
+
+[ext_resource type="Script" uid="uid://dq58rj15aheoq" path="res://scripts/office.gd" id="1_1o6bn"]
+[ext_resource type="AudioStream" uid="uid://bxt0qmpqksl4l" path="res://sounds/OminiousSound1.mp3" id="2_spd4q"]
+[ext_resource type="AudioStream" uid="uid://b81fbds6e2pnc" path="res://sounds/OminiousSound2.mp3" id="3_ixtdc"]
+[ext_resource type="AudioStream" uid="uid://c2a8ih5r8tcrs" path="res://sounds/Running.ogg" id="3_sgl2t"]
+[ext_resource type="AudioStream" uid="uid://rul8uamd01gv" path="res://sounds/OminiousSound3.mp3" id="4_ruyut"]
+[ext_resource type="AudioStream" uid="uid://lhh4cacsrvfg" path="res://sounds/Chození.mp3" id="5_xnu4a"]
+[ext_resource type="AudioStream" uid="uid://j675xlsw4gt6" path="res://sounds/FlashLightSound.ogg" id="6_suyxu"]
+[ext_resource type="AudioStream" uid="uid://dsfejvc4etgcy" path="res://sounds/PowerDownSound.mp3" id="8_qouja"]
+[ext_resource type="Texture2D" uid="uid://bdc3i80nt8fwx" path="res://animations/PohledKamery.png" id="10_dinhu"]
+[ext_resource type="Texture2D" uid="uid://ugw65ykka6gc" path="res://animations/view_left/PohledLevaAnimace (2).png" id="11_qouja"]
+[ext_resource type="Texture2D" uid="uid://djb3c8mooq7kr" path="res://animations/view_right/PohledPrava (1).png" id="12_qspcq"]
+[ext_resource type="Texture2D" uid="uid://dydhh3x73nvrs" path="res://animations/view_left/PohledLevaAnimace (3).png" id="12_wljb1"]
+[ext_resource type="Texture2D" uid="uid://datb5bgu7p0oc" path="res://animations/view_right/PohledPrava (2).png" id="13_hfdk1"]
+[ext_resource type="Texture2D" uid="uid://ckrgjiujtjagh" path="res://animations/view_left/PohledLevaAnimace (4).png" id="13_v2yb1"]
+[ext_resource type="Texture2D" uid="uid://hysl728swj4j" path="res://animations/view_right/PohledPrava (3).png" id="14_0hhul"]
+[ext_resource type="Texture2D" uid="uid://dw04q1s8m8g03" path="res://animations/view_left/PohledLevaAnimace (5).png" id="14_js0lu"]
+[ext_resource type="Texture2D" uid="uid://dry6odq4hpurj" path="res://animations/view_left/PohledLevaAnimace (6).png" id="15_gxtfn"]
+[ext_resource type="Texture2D" uid="uid://pdkrjyvjxbq7" path="res://animations/view_right/PohledPrava (4).png" id="15_ydh56"]
+[ext_resource type="Texture2D" uid="uid://caeo2fyum4kst" path="res://animations/view_right/PohledPrava (5).png" id="16_4h3u3"]
+[ext_resource type="Texture2D" uid="uid://d2hhfifpihytf" path="res://animations/view_left/PohledLevaAnimace (7).png" id="16_twgab"]
+[ext_resource type="Texture2D" uid="uid://dfn8ub36hdu5o" path="res://animations/view_left/PohledLevaAnimace (8).png" id="17_02fa5"]
+[ext_resource type="Texture2D" uid="uid://dvka2snjl0kpk" path="res://animations/view_right/PohledPrava (6).png" id="17_np2cg"]
+[ext_resource type="Texture2D" uid="uid://jn8kjjieiqwn" path="res://animations/view_left/PohledLevaAnimace (9).png" id="18_nepv3"]
+[ext_resource type="Texture2D" uid="uid://cwlto2egunw5e" path="res://animations/view_right/PohledPrava (7).png" id="18_wiqqb"]
+[ext_resource type="Texture2D" uid="uid://vepj2aevx1pm" path="res://animations/view_left/PohledLevaAnimace (10).png" id="19_7025r"]
+[ext_resource type="Texture2D" uid="uid://cqj36ob86ewoh" path="res://animations/view_right/PohledPrava (8).png" id="19_r0rd5"]
+[ext_resource type="Texture2D" uid="uid://ct5cmtavnmfmw" path="res://animations/PohledLevaSvetlo.png" id="20_v2yb1"]
+[ext_resource type="Texture2D" uid="uid://ra00yeeou2xj" path="res://animations/view_right/PohledPrava (9).png" id="20_wnjl6"]
+[ext_resource type="Texture2D" uid="uid://d3eqfq1v4yljq" path="res://animations/Chicken_leva.png" id="21_gxtfn"]
+[ext_resource type="Texture2D" uid="uid://cr0mqclxxh4ak" path="res://animations/view_right/PohledPrava (10).png" id="21_snlml"]
+[ext_resource type="AudioStream" uid="uid://8spem4ynv2nj" path="res://sounds/ComputerFanSound.ogg" id="29_sgl2t"]
+[ext_resource type="Texture2D" uid="uid://c7l7ivuap4q8g" path="res://animations/PohledPravaSvetlo.png" id="31_js0lu"]
+[ext_resource type="Texture2D" uid="uid://3s2mxtdxcbc1" path="res://animations/Chicken_prava.png" id="32_twgab"]
+[ext_resource type="Texture2D" uid="uid://dvu8m7dg6apw6" path="res://sounds/x48n0.jpg" id="32_v2yb1"]
+[ext_resource type="Script" uid="uid://bv2i6lqhns64l" path="res://scripts/rooster_ai.gd" id="32_wljb1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v2yb1"]
+load_path = "res://.godot/imported/PohledPravaSvetlo.png-aac049b16b15421fa43abc0447a5cf47.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pidd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_dinhu")
+}],
+"loop": false,
+"name": &"animation_view_front",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qouja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wljb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v2yb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_js0lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gxtfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_twgab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_02fa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nepv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7025r")
+}],
+"loop": false,
+"name": &"animation_view_left",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_gxtfn")
+}],
+"loop": true,
+"name": &"animation_view_left_animatronic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_7025r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nepv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_02fa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_twgab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gxtfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_js0lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v2yb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wljb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qouja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dinhu")
+}],
+"loop": false,
+"name": &"animation_view_left_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_v2yb1")
+}],
+"loop": true,
+"name": &"animation_view_left_light",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_7025r")
+}],
+"loop": true,
+"name": &"animation_view_left_look",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_hfdk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0hhul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ydh56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4h3u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_np2cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wiqqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_r0rd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wnjl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_snlml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qspcq")
+}],
+"loop": false,
+"name": &"animation_view_right",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_twgab")
+}],
+"loop": true,
+"name": &"animation_view_right_animatronic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_qspcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_snlml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wnjl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_r0rd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wiqqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_np2cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4h3u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ydh56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0hhul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hfdk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dinhu")
+}],
+"loop": false,
+"name": &"animation_view_right_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_js0lu")
+}],
+"loop": true,
+"name": &"animation_view_right_light",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_qspcq")
+}],
+"loop": true,
+"name": &"animation_view_right_look",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wljb1"]
+
+[sub_resource type="SystemFont" id="SystemFont_qouja"]
+font_names = PackedStringArray("LCD Solid")
+oversampling = 0.7
+
+[sub_resource type="LabelSettings" id="LabelSettings_wljb1"]
+font = SubResource("SystemFont_qouja")
+font_size = 21
+
+[sub_resource type="SystemFont" id="SystemFont_sgl2t"]
+font_names = PackedStringArray("LCD Solid")
+subpixel_positioning = 0
+msdf_size = 49
+oversampling = 0.7
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8ala"]
+font = SubResource("SystemFont_sgl2t")
+font_size = 21
+
+[sub_resource type="SystemFont" id="SystemFont_wljb1"]
+font_names = PackedStringArray("LCD Solid")
+msdf_pixel_range = 4
+msdf_size = 35
+oversampling = 0.7
+
+[sub_resource type="LabelSettings" id="LabelSettings_xnu4a"]
+font = SubResource("SystemFont_wljb1")
+font_size = 40
+
+[sub_resource type="Theme" id="Theme_sgl2t"]
+
+[node name="Game" type="Node2D"]
+
+[node name="RoosterAi" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("32_wljb1")
+
+[node name="Office" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1o6bn")
+
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="Office"]
+stream = ExtResource("5_xnu4a")
+volume_db = 12.877
+panning_strength = 0.0
+bus = &"SuroundZvuky"
+
+[node name="RunningSound" type="AudioStreamPlayer" parent="Office"]
+stream = ExtResource("3_sgl2t")
+volume_db = -14.991
+bus = &"SuroundZvuky"
+
+[node name="OminiousSound1" type="AudioStreamPlayer" parent="Office"]
+stream = ExtResource("2_spd4q")
+volume_db = -19.676
+bus = &"Ambience"
+
+[node name="OminiousSound2" type="AudioStreamPlayer" parent="Office"]
+stream = ExtResource("3_ixtdc")
+volume_db = -13.627
+bus = &"Ambience"
+
+[node name="OminiousSound3" type="AudioStreamPlayer" parent="Office"]
+stream = ExtResource("4_ruyut")
+volume_db = -14.054
+bus = &"Ambience"
+
+[node name="FlashLightSound" type="AudioStreamPlayer" parent="Office"]
+stream = ExtResource("6_suyxu")
+bus = &"VFX"
+
+[node name="PowerDownSound" type="AudioStreamPlayer" parent="Office"]
+stream = ExtResource("8_qouja")
+volume_db = -11.243
+bus = &"Ambience"
+
+[node name="PohledLevaSvetlo" type="Sprite2D" parent="Office"]
+visible = false
+position = Vector2(963.888, 540.5)
+scale = Vector2(1.034, 1.034)
+texture = ExtResource("20_v2yb1")
+
+[node name="PohledPravaSvetlo" type="Sprite2D" parent="Office"]
+visible = false
+position = Vector2(963.888, 540.5)
+scale = Vector2(1.034, 1.034)
+texture = SubResource("CompressedTexture2D_v2yb1")
+
+[node name="AnimationPlayerOffice" type="AnimatedSprite2D" parent="Office"]
+position = Vector2(963.888, 540.5)
+scale = Vector2(1.03426, 1.03426)
+sprite_frames = SubResource("SpriteFrames_pidd4")
+animation = &"animation_view_front"
+
+[node name="PowerUse" type="ProgressBar" parent="Office"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 1006.0
+offset_right = 461.0
+offset_bottom = 1074.0
+
+[node name="UiPc" type="Control" parent="Office"]
+material = SubResource("ShaderMaterial_wljb1")
+layout_mode = 3
+anchors_preset = 0
+offset_right = 120.0
+offset_bottom = 89.0
+
+[node name="CamFeed" type="Control" parent="Office/UiPc"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="X48n0" type="Sprite2D" parent="Office/UiPc/CamFeed"]
+position = Vector2(1044, 591)
+scale = Vector2(0.224375, 0.203333)
+texture = ExtResource("32_v2yb1")
+
+[node name="PowerText" type="Label" parent="Office/UiPc"]
+use_parent_material = true
+layout_mode = 0
+offset_left = 461.0
+offset_top = 284.0
+offset_right = 526.0
+offset_bottom = 310.0
+rotation = 0.0219408
+text = "POWER"
+label_settings = SubResource("LabelSettings_wljb1")
+
+[node name="Power" type="Label" parent="Office/UiPc"]
+use_parent_material = true
+layout_mode = 2
+offset_left = 407.0
+offset_top = 283.0
+offset_right = 447.0
+offset_bottom = 305.0
+rotation = 0.0203083
+text = "100 power"
+label_settings = SubResource("LabelSettings_wljb1")
+visible_characters = 3
+visible_ratio = 0.343
+
+[node name="GameHour" type="Label" parent="Office/UiPc"]
+layout_mode = 2
+offset_left = 407.0
+offset_top = 318.0
+offset_right = 484.0
+offset_bottom = 340.0
+rotation = 0.0102086
+text = "12 AM"
+label_settings = SubResource("LabelSettings_v8ala")
+
+[node name="Cameras" type="Label" parent="Office/UiPc"]
+layout_mode = 2
+offset_left = 709.0
+offset_top = 286.0
+offset_right = 925.0
+offset_bottom = 360.0
+text = "0"
+label_settings = SubResource("LabelSettings_xnu4a")
+
+[node name="Button2" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 415.0
+offset_right = 431.0
+offset_bottom = 445.0
+focus_mode = 0
+
+[node name="Button3" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 609.0
+offset_right = 393.0
+offset_bottom = 636.0
+focus_mode = 0
+
+[node name="Button4" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 497.0
+offset_right = 431.0
+offset_bottom = 527.0
+focus_mode = 0
+
+[node name="Button5" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 581.0
+offset_right = 430.0
+offset_bottom = 610.0
+focus_mode = 0
+
+[node name="Button7" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 705.0
+offset_right = 392.0
+offset_bottom = 734.0
+focus_mode = 0
+
+[node name="Button9" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 647.0
+offset_right = 538.0
+offset_bottom = 675.0
+focus_mode = 0
+
+[node name="Button8" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 701.0
+offset_right = 471.0
+offset_bottom = 729.0
+focus_mode = 0
+
+[node name="Button6" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 607.0
+offset_right = 470.0
+offset_bottom = 634.0
+focus_mode = 0
+
+[node name="Button" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 498.0
+offset_right = 350.0
+offset_bottom = 526.0
+focus_mode = 0
+
+[node name="Buttons" type="Control" parent="Office"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -74.0
+offset_top = 15.0
+offset_right = -31.0
+offset_bottom = 73.0
+
+[node name="ButtonRightSide" type="Button" parent="Office/Buttons"]
+layout_mode = 2
+offset_left = 1901.0
+offset_top = -6.0
+offset_right = 2033.0
+offset_bottom = 1119.0
+flat = true
+
+[node name="ButtonLeftSide" type="Button" parent="Office/Buttons"]
+layout_mode = 2
+offset_left = -28.0
+offset_top = -4.0
+offset_right = 174.0
+offset_bottom = 1116.0
+flat = true
+
+[node name="Animatronics" type="Control" parent="Office"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 16.0
+offset_bottom = 5.0
+
+[node name="Light" type="Button" parent="Office"]
+visible = false
+layout_mode = 0
+offset_left = 701.0
+offset_top = 947.0
+offset_right = 1221.0
+offset_bottom = 1090.0
+focus_mode = 0
+theme = SubResource("Theme_sgl2t")
+toggle_mode = true
+text = "Světlo"
+flat = true
+
+[node name="DebugLabel" type="Label" parent="Office"]
+layout_mode = 0
+offset_right = 232.0
+offset_bottom = 98.0
+
+[node name="TimerRooster" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="AmbiencePc" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_sgl2t")
+volume_db = -10.306
+autoplay = true
+bus = &"Ambience"
+
+[node name="TimerHour" type="Timer" parent="."]
+wait_time = 45.0
+autostart = true
+
+[node name="TimerPower" type="Timer" parent="."]
+wait_time = 2.277
+autostart = true
+
+[connection signal="pressed" from="Office/UiPc/Button2" to="Office" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button3" to="Office" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button4" to="Office" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button5" to="Office" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button7" to="Office" method="_on_button_7_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button9" to="Office" method="_on_button_9_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button8" to="Office" method="_on_button_8_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button6" to="Office" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Office/UiPc/Button" to="Office" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Office/Buttons/ButtonRightSide" to="Office" method="_on_button_right_side_mouse_entered"]
+[connection signal="mouse_entered" from="Office/Buttons/ButtonLeftSide" to="Office" method="_on_button_left_side_mouse_entered"]
+[connection signal="button_down" from="Office/Light" to="RoosterAi" method="_on_light_button_down"]
+[connection signal="button_down" from="Office/Light" to="Office" method="_on_light_button_down"]
+[connection signal="button_up" from="Office/Light" to="RoosterAi" method="_on_light_button_up"]
+[connection signal="button_up" from="Office/Light" to="Office" method="_on_light_button_up"]
+[connection signal="pressed" from="Office/Light" to="Office" method="_on_light_pressed"]
+[connection signal="timeout" from="TimerRooster" to="RoosterAi" method="_on_timer_rooster_timeout"]
+[connection signal="timeout" from="TimerRooster" to="Office" method="_on_timer_rooster_timeout"]
+[connection signal="timeout" from="TimerHour" to="Office" method="_on_timer_hour_timeout"]

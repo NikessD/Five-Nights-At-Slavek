@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwblblykw5b4u"]
+
+[ext_resource type="Script" uid="uid://d1wf8cprrctva" path="res://scripts/menu.gd" id="1_87om0"]
+[ext_resource type="Texture2D" uid="uid://gbf2fwxdt244" path="res://sprites/HS_Kreslicí plátno 1.png" id="2_6qanq"]
+[ext_resource type="Script" uid="uid://d0faaseofyus0" path="res://scripts/timer.gd" id="3_rdtdx"]
+[ext_resource type="AudioStream" uid="uid://7ib2goek06si" path="res://sounds/ElevenLabs_2025-03-25T17_44_59_Callum_pre_sp84_s100_sb0_se0_b_m2.mp3" id="4_gde50"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87om0")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IntroLogo" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(947, 527)
+scale = Vector2(1.48995, 1.54232)
+texture = ExtResource("2_6qanq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.436
+one_shot = true
+autostart = true
+script = ExtResource("3_rdtdx")
+
+[node name="ElevenLabs2025-03-25t174459CallumPreSp84S100Sb0Se0BM2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gde50")
+volume_db = -11.243
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

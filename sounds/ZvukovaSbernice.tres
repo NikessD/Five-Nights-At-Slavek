@@ -1,0 +1,74 @@
+[gd_resource type="AudioBusLayout" load_steps=10 format=3 uid="uid://cf4hpilf2ms0j"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_kd8t1"]
+resource_name = "Reverb"
+
+[sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_e7st4"]
+resource_name = "StereoEnhance"
+time_pullout_ms = 50.0
+
+[sub_resource type="AudioEffectHighShelfFilter" id="AudioEffectHighShelfFilter_cnswi"]
+resource_name = "HighShelfFilter"
+cutoff_hz = 20098.0
+
+[sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_cnswi"]
+resource_name = "StereoEnhance"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_cnswi"]
+resource_name = "Reverb"
+room_size = 0.39
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_cnswi"]
+resource_name = "Limiter"
+
+[sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_5a5it"]
+resource_name = "StereoEnhance"
+time_pullout_ms = 25.68
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_li5ml"]
+resource_name = "Reverb"
+room_size = 1.0
+damping = 0.08
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_li5ml"]
+resource_name = "PitchShift"
+pitch_scale = 0.43
+
+[resource]
+bus/0/volume_db = -0.328256
+bus/1/name = &"Ambience"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -32.0347
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectReverb_kd8t1")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectStereoEnhance_e7st4")
+bus/1/effect/1/enabled = true
+bus/1/effect/2/effect = SubResource("AudioEffectHighShelfFilter_cnswi")
+bus/1/effect/2/enabled = true
+bus/2/name = &"VFX"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = -9.2092
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectStereoEnhance_cnswi")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectReverb_cnswi")
+bus/2/effect/1/enabled = true
+bus/2/effect/2/effect = SubResource("AudioEffectLimiter_cnswi")
+bus/2/effect/2/enabled = true
+bus/3/name = &"SuroundZvuky"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -30.1465
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectStereoEnhance_5a5it")
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource("AudioEffectReverb_li5ml")
+bus/3/effect/1/enabled = true
+bus/3/effect/2/effect = SubResource("AudioEffectPitchShift_li5ml")
+bus/3/effect/2/enabled = true
