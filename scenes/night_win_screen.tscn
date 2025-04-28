@@ -30,12 +30,13 @@ wait_time = 2.278
 one_shot = true
 autostart = true
 
-[node name="Night" type="Label" parent="."]
+[node name="Container" type="Container" parent="."]
 layout_mode = 0
-offset_left = 646.0
-offset_top = 448.0
-offset_right = 1228.0
-offset_bottom = 639.0
+offset_right = 1923.0
+offset_bottom = 1085.0
+
+[node name="Night" type="Label" parent="Container"]
+layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0eiwq")
 theme_override_font_sizes/font_size = 190
 text = "SSSSS"

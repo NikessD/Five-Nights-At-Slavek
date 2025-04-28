@@ -71,9 +71,13 @@ func _process(delta: float) -> void:
 
 func _on_timer_rooster_timeout() -> void:
 	
-	print(animatronic_rooster_camera)
 	animatronic_random_number = randi_range(0, 20)
-	if animatronic_random_number <= GlobalVars.animatronic_rooster_AI :
+	if animatronic_rooster_camera == 11:
+		cam_11()
+	elif animatronic_rooster_camera == 8:
+		cam_8()
+	
+	elif animatronic_random_number <= GlobalVars.animatronic_rooster_AI :
 		match animatronic_rooster_camera:
 			1:
 				cam_1()
@@ -89,14 +93,11 @@ func _on_timer_rooster_timeout() -> void:
 				cam_6()
 			7:
 				cam_7()
-			8:
-				cam_8()
 			9:
 				cam_9()
 			10:
 				cam_10()
-			11:
-				cam_11()
+
 	
 
 func cam_1():
@@ -182,7 +183,6 @@ func _on_light_button_down() -> void:
 		pass
 		
 
-			
 func _on_light_button_up() -> void:
 	$"../Office/PowerUse".value -= 25
 	$"../Office/FlashLightSound".stop()

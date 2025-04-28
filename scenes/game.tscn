@@ -527,12 +527,13 @@ autostart = true
 stream = ExtResource("5_xnu4a")
 volume_db = 12.877
 panning_strength = 0.0
-bus = &"SuroundZvuky"
+bus = &"Ambience"
 
 [node name="RunningSound" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("3_sgl2t")
-volume_db = -14.991
-bus = &"SuroundZvuky"
+volume_db = -12.181
+pitch_scale = 1.2
+bus = &"Ambience"
 
 [node name="OminiousSound1" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("2_spd4q")
@@ -786,11 +787,9 @@ offset_bottom = 98.0
 wait_time = 5.0
 autostart = true
 
-[node name="AmbiencePc" type="AudioStreamPlayer" parent="."]
+[node name="ComputerFanSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_sgl2t")
-volume_db = -10.306
-autoplay = true
-bus = &"Ambience"
+volume_db = -18.739
 
 [node name="TimerHour" type="Timer" parent="."]
 wait_time = 45.0
