@@ -2,8 +2,8 @@ extends Control
 
 # player var
 var head_position = "stred"
-
-
+var door_view_first = 0
+var cam_view_first = 0
 # Animatronic var
 #var animatronic_random_number = 0
 #var GlobalVars.animatronic_rooster_AI  = 1
@@ -25,15 +25,27 @@ var GoldenS_camera = 0
 var GoldenS_timer = 0
 var GoldenS_anger = 0
 
+
 func _ready() -> void:
+	$Tutorial/camfed.set_visible(false)
+	$Tutorial/sideview.set_visible(false)
 	$PowerUse.value = 10
 	$AnimationPlayerOffice.play("animation_view_front")
 	GlobalVars.view_front = true
+	if GlobalVars.night == 1:
+		$Tutorial/camfed.set_visible(true)
+		await get_tree().create_timer(20).timeout
+		$Tutorial/camfed.set_visible(false)
 
 
 
 
 func _process(delta: float) -> void:
+	if GlobalVars.night == 1 and cam_view_first == 0:
+		cam_view_first = 1
+		$Tutorial/camfed.set_visible(true)
+		await get_tree().create_timer(20).timeout
+		$Tutorial/camfed.set_visible(false)
 	if hour == 6:
 		get_tree().change_scene_to_file("res://scenes/night_win_screen.tscn")
 	if GlobalVars.light_button_is_pressed == true:
@@ -73,6 +85,9 @@ func _process(delta: float) -> void:
 
 # Pravý pohyb hráče
 func _on_button_right_side_mouse_entered() -> void:
+	if GlobalVars.night == 1 and cam_view_first == 1:
+		cam_view_first = 1
+		$Tutorial/camfed.set_visible(false)
 	if GlobalVars.view_front == true:
 			GlobalVars.view_right = true
 			GlobalVars.view_front = false
@@ -93,8 +108,15 @@ func _on_button_right_side_mouse_entered() -> void:
 		$Buttons.set_visible(true)
 		$UiPc.set_visible(true)
 
+	if GlobalVars.night == 1 and door_view_first == 0:
+		dvere_tutorial()
+		
 # Levý pohyb hráče
 func _on_button_left_side_mouse_entered(): 
+	if GlobalVars.night == 1 and cam_view_first == 1:
+		cam_view_first = 1
+		$Tutorial/camfed.set_visible(false)
+		
 	if GlobalVars.view_front == true:
 		GlobalVars.view_left = true
 		GlobalVars.view_front = false
@@ -114,7 +136,9 @@ func _on_button_left_side_mouse_entered():
 		await get_tree().create_timer(0.4).timeout
 		$Buttons.set_visible(true)
 		$UiPc.set_visible(true)
-
+	
+	if GlobalVars.night == 1 and door_view_first == 0:
+		dvere_tutorial()
 
 # Pohyb
 #func _on_timer_rooster_timeout() -> void:
@@ -163,7 +187,12 @@ func _on_timer_hour_timeout() -> void:
 	hour += 1
 	$UiPc/GameHour.text = str(hour) + " AM"
 	
-
+func dvere_tutorial():
+	door_view_first = 1
+	$Tutorial/sideview.set_visible(true)
+	await get_tree().create_timer(7).timeout
+	$Tutorial/sideview.set_visible(false)
+		
 
 #func _on_light_button_down() -> void:
 	#$PowerUse.value += 25

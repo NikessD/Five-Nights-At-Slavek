@@ -593,8 +593,6 @@ offset_bottom = 1074.0
 material = SubResource("ShaderMaterial_wljb1")
 layout_mode = 3
 anchors_preset = 0
-offset_right = 120.0
-offset_bottom = 89.0
 
 [node name="CamFeed" type="Control" parent="Office/UiPc"]
 anchors_preset = 0
@@ -734,6 +732,62 @@ offset_top = 498.0
 offset_right = 350.0
 offset_bottom = 526.0
 focus_mode = 0
+
+[node name="Tutorial" type="Control" parent="Office"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="camfed" type="Control" parent="Office/Tutorial"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Office/Tutorial/camfed"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 400.0
+offset_right = 350.0
+offset_bottom = 428.0
+text = "Tady přepínáš kamery"
+
+[node name="Label3" type="Label" parent="Office/Tutorial/camfed"]
+offset_left = 231.0
+offset_top = 193.0
+offset_right = 662.0
+offset_bottom = 335.0
+text = "Tvoje zbývající energie a čas je tady, 
+pokud se ti energie dostane na nulu tak se ti vše vypne. "
+
+[node name="Label2" type="Label" parent="Office/Tutorial/camfed"]
+offset_left = 725.0
+offset_top = 381.0
+offset_right = 1495.0
+offset_bottom = 456.0
+text = "Tvůj camera feed spolu se zvolenou kamerou je tady. 
+Pokud není animatronic vidět. je možné že se nachází u některých z tvých bočních vstupových dveří.
+Přesunutím myši na okraj obrazovky se otočíš danným směrem"
+
+[node name="sideview" type="Control" parent="Office/Tutorial"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="Office/Tutorial/sideview"]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 963.0
+offset_right = 1218.0
+offset_bottom = 986.0
+text = "Pro zapnutí svítilny zmáčkni a podrž toto tlačítko"
+
+[node name="Label" type="Label" parent="Office/Tutorial/sideview"]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 814.0
+offset_right = 1316.0
+offset_bottom = 886.0
+text = "Pokud se animatronic nachází u tvých dveří, musíš na něj chvilku posvítit."
 
 [node name="Buttons" type="Control" parent="Office"]
 layout_mode = 3
