@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://bhqcnvyxjgoh1"]
+[gd_scene load_steps=17 format=3 uid="uid://bhqcnvyxjgoh1"]
 
 [ext_resource type="Script" uid="uid://d1wf8cprrctva" path="res://scripts/menu.gd" id="1_v86rl"]
 [ext_resource type="AudioStream" uid="uid://deyb8ve2gmluo" path="res://sounds/click-button-140881.mp3" id="2_13sgg"]
+[ext_resource type="Texture2D" uid="uid://cxlus75bm8ern" path="res://sprites/DefaultBackground_Kreslicí plátno 1.png" id="2_i6lef"]
 [ext_resource type="AudioStream" uid="uid://byfsd0famoq8b" path="res://sounds/modern-button-click-291234.mp3" id="3_i6lef"]
 [ext_resource type="AudioStream" uid="uid://b5psk57q003qe" path="res://sounds/MenuStatic.mp3" id="4_70i5f"]
 [ext_resource type="Texture2D" uid="uid://b471kuyokmikb" path="res://sprites/PNUS_LOGO_Kreslicí plátno 1.png" id="5_mj5lg"]
@@ -40,6 +41,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource("Theme_o0tnf")
 script = ExtResource("1_v86rl")
+
+[node name="DefaultBackgroundKreslicíPlátno1" type="Sprite2D" parent="."]
+position = Vector2(964, 542)
+scale = Vector2(1.04062, 1.03519)
+texture = ExtResource("2_i6lef")
 
 [node name="Menu" type="Control" parent="."]
 anchors_preset = 0
@@ -112,8 +118,8 @@ text = "QUIT"
 flat = true
 
 [node name="FnasLogo" type="Sprite2D" parent="Menu"]
-position = Vector2(227.128, 290)
-scale = Vector2(0.834008, 0.834008)
+position = Vector2(249, 257)
+scale = Vector2(0.193882, 0.193882)
 texture = ExtResource("5_mj5lg")
 
 [node name="VersionNumber" type="Label" parent="Menu"]
@@ -123,7 +129,7 @@ offset_top = 1053.0
 offset_right = 1918.0
 offset_bottom = 1076.0
 theme_override_fonts/font = ExtResource("6_ufwb2")
-text = "VER - 0.5.0"
+text = "VER - 0.5.2"
 
 [node name="LoadingScreen" type="Control" parent="."]
 visible = false
