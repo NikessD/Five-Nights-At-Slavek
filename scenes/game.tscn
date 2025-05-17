@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dp1pppkrg6cqj"]
+[gd_scene load_steps=70 format=3 uid="uid://dp1pppkrg6cqj"]
 
 [ext_resource type="Script" uid="uid://dq58rj15aheoq" path="res://scripts/office.gd" id="1_1o6bn"]
 [ext_resource type="AudioStream" uid="uid://bxt0qmpqksl4l" path="res://sounds/OminiousSound1.mp3" id="2_spd4q"]
@@ -36,19 +36,26 @@
 [ext_resource type="Texture2D" uid="uid://3s2mxtdxcbc1" path="res://animations/view_office_right/Chicken_prava.png" id="32_twgab"]
 [ext_resource type="Texture2D" uid="uid://dvu8m7dg6apw6" path="res://sounds/x48n0.jpg" id="32_v2yb1"]
 [ext_resource type="Script" uid="uid://bv2i6lqhns64l" path="res://scripts/rooster_ai.gd" id="32_wljb1"]
-[ext_resource type="Texture2D" uid="uid://dfcad8ott85by" path="res://animations/camera_stages/cam_1/StageChick.png" id="36_8ool0"]
-[ext_resource type="Texture2D" uid="uid://cgb1sg1f7kqjh" path="res://animations/camera_stages/cam_1/Stage.png" id="37_pr1ej"]
-[ext_resource type="Texture2D" uid="uid://djw8ip177i4pr" path="res://animations/camera_stages/cam_2/DiningHalChick.png" id="38_05nbr"]
-[ext_resource type="Texture2D" uid="uid://bmgxrcybxkdu" path="res://animations/camera_stages/cam_2/DiningHall.png" id="39_0sl42"]
-[ext_resource type="Texture2D" uid="uid://0f15ykyc5cv1" path="res://animations/camera_stages/cam_3/Untitled4.png" id="40_fedci"]
-[ext_resource type="Texture2D" uid="uid://bc25dug37u6j6" path="res://animations/camera_stages/cam_3/Untitled5.png" id="41_8qswn"]
+[ext_resource type="Texture2D" uid="uid://crf1oq2s80nbc" path="res://animations/camera_stages/cam_1/2-StageWith.png" id="36_3hbvx"]
+[ext_resource type="Texture2D" uid="uid://wbgdi46qjxb6" path="res://animations/camera_stages/cam_1/1-Stage.png" id="37_q8j3a"]
+[ext_resource type="Texture2D" uid="uid://bf0qxw7oa6wkb" path="res://animations/camera_stages/cam_2/4-DiningWith.png" id="38_ms3bu"]
+[ext_resource type="Texture2D" uid="uid://b76xd4v1xufda" path="res://animations/camera_stages/cam_3/5-Untitled5.png" id="39_7ixpq"]
+[ext_resource type="Texture2D" uid="uid://bs3bq3ic51nwc" path="res://animations/camera_stages/cam_2/3-Dining.png" id="39_q8j3a"]
+[ext_resource type="Texture2D" uid="uid://cbg17nhrywmxy" path="res://animations/camera_stages/cam_3/8-Untitled4.png" id="40_bk1p3"]
+[ext_resource type="Texture2D" uid="uid://doiv2sxmt6ve5" path="res://animations/camera_stages/cam_4/7-HallwayWith.png" id="41_n8ral"]
 [ext_resource type="Texture2D" uid="uid://cauke0ur453f7" path="res://sprites/SlávekLinus - kopie.png" id="41_pr1ej"]
-[ext_resource type="Texture2D" uid="uid://pmsfvw0akjao" path="res://animations/camera_stages/Untitled - kopie.png" id="42_rm0al"]
-[ext_resource type="Texture2D" uid="uid://cr1xemrs2pgbw" path="res://animations/camera_stages/cam_7/Untitled2.png" id="43_i4re6"]
+[ext_resource type="Texture2D" uid="uid://l8qugnyamusy" path="res://animations/camera_stages/cam_4/6-Hallway.png" id="42_yd4ix"]
+[ext_resource type="Texture2D" uid="uid://cgb027mw086wc" path="res://animations/camera_stages/cam_5/10-HallwayleftWith.png" id="43_66xif"]
 [ext_resource type="Texture2D" uid="uid://cxlus75bm8ern" path="res://sprites/DefaultBackground_Kreslicí plátno 1.png" id="44_8qswn"]
-[ext_resource type="Texture2D" uid="uid://b6fyoig34p8m3" path="res://animations/camera_stages/Untitled.png" id="44_pf7vy"]
-[ext_resource type="Texture2D" uid="uid://bep62tl5cccob" path="res://animations/camera_stages/cam_9/Untitled2 - kopie.png" id="45_o8ni1"]
+[ext_resource type="Texture2D" uid="uid://dr2pafjv1vcww" path="res://animations/camera_stages/cam_6/12-HallwayrightWith.png" id="45_0rmfi"]
+[ext_resource type="Texture2D" uid="uid://b10nnql0ep434" path="res://animations/camera_stages/cam_5/Hallwayleft.png" id="45_bk1p3"]
+[ext_resource type="Texture2D" uid="uid://dimatb73f5xye" path="res://animations/camera_stages/cam_6/11-Hallwayright.png" id="46_xbak0"]
+[ext_resource type="Texture2D" uid="uid://c4o5mbjsyr71q" path="res://animations/camera_stages/cam_7/13-Untitled - kopie.png" id="47_3x28f"]
+[ext_resource type="Texture2D" uid="uid://bae0xa5abefkf" path="res://animations/camera_stages/cam_7/14-Untitled2.png" id="48_l6q63"]
 [ext_resource type="AudioStream" uid="uid://nlilqa01kk1y" path="res://sounds/ComputerFanSoundLOOP.mp3" id="49_8qswn"]
+[ext_resource type="Texture2D" uid="uid://bhf42q6cd4qxl" path="res://animations/camera_stages/cam_9/15-Untitled.png" id="49_mmvbu"]
+[ext_resource type="Texture2D" uid="uid://dymap122o0xpf" path="res://animations/camera_stages/cam_9/16-Untitled2 - kopie.png" id="50_weeiq"]
+[ext_resource type="SystemFont" uid="uid://5qb10ktoyk30" path="res://styles/MenuFont.tres" id="55_ms3bu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_02fa5"]
 
@@ -330,7 +337,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_8ool0")
+"texture": ExtResource("36_3hbvx")
 }],
 "loop": false,
 "name": &"Cam1Animatronic",
@@ -338,7 +345,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("37_pr1ej")
+"texture": ExtResource("37_q8j3a")
 }],
 "loop": true,
 "name": &"Cam1Nothing",
@@ -346,7 +353,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("38_05nbr")
+"texture": ExtResource("38_ms3bu")
 }],
 "loop": false,
 "name": &"Cam2Animatronic",
@@ -354,7 +361,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_0sl42")
+"texture": ExtResource("39_q8j3a")
 }],
 "loop": true,
 "name": &"Cam2Nothing",
@@ -362,7 +369,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("40_fedci")
+"texture": ExtResource("40_bk1p3")
 }],
 "loop": false,
 "name": &"Cam3Animatronic",
@@ -370,7 +377,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("41_8qswn")
+"texture": ExtResource("39_7ixpq")
 }],
 "loop": true,
 "name": &"Cam3Nothing",
@@ -378,7 +385,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("38_05nbr")
+"texture": ExtResource("41_n8ral")
 }],
 "loop": false,
 "name": &"Cam4Animatronic",
@@ -386,7 +393,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_0sl42")
+"texture": ExtResource("42_yd4ix")
 }],
 "loop": true,
 "name": &"Cam4Nothing",
@@ -394,7 +401,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("38_05nbr")
+"texture": ExtResource("43_66xif")
 }],
 "loop": false,
 "name": &"Cam5Animatronic",
@@ -402,7 +409,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_0sl42")
+"texture": ExtResource("45_bk1p3")
 }],
 "loop": true,
 "name": &"Cam5Nothing",
@@ -410,7 +417,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("38_05nbr")
+"texture": ExtResource("45_0rmfi")
 }],
 "loop": false,
 "name": &"Cam6Animatronic",
@@ -418,7 +425,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_0sl42")
+"texture": ExtResource("46_xbak0")
 }],
 "loop": true,
 "name": &"Cam6Nothing",
@@ -426,7 +433,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("44_pf7vy")
+"texture": ExtResource("47_3x28f")
 }],
 "loop": false,
 "name": &"Cam7Animatronic",
@@ -434,7 +441,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("45_o8ni1")
+"texture": ExtResource("48_l6q63")
 }],
 "loop": true,
 "name": &"Cam7Nothing",
@@ -442,7 +449,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("42_rm0al")
+"texture": ExtResource("49_mmvbu")
 }],
 "loop": false,
 "name": &"Cam8Animatronic",
@@ -450,7 +457,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("43_i4re6")
+"texture": ExtResource("50_weeiq")
 }],
 "loop": true,
 "name": &"Cam8Nothing",
@@ -500,6 +507,9 @@ oversampling = 0.7
 [sub_resource type="LabelSettings" id="LabelSettings_xnu4a"]
 font = SubResource("SystemFont_wljb1")
 font_size = 40
+
+[sub_resource type="SystemFont" id="SystemFont_7ixpq"]
+font_names = PackedStringArray("LCD Solid")
 
 [sub_resource type="Theme" id="Theme_sgl2t"]
 
@@ -612,7 +622,7 @@ position = Vector2(1078.9, 541.972)
 rotation = -5.54186e-05
 scale = Vector2(0.401512, 0.371662)
 sprite_frames = SubResource("SpriteFrames_7025r")
-animation = &"Cam9Animatronic"
+animation = &"Cam5Nothing"
 
 [node name="X48n0" type="Sprite2D" parent="Office/UiPc/CamFeed"]
 visible = false
@@ -757,23 +767,26 @@ offset_left = 182.0
 offset_top = 415.0
 offset_right = 354.0
 offset_bottom = 443.0
+theme_override_fonts/font = ExtResource("55_ms3bu")
 text = "Tady přepínáš kamery"
 
 [node name="Label3" type="Label" parent="Office/Tutorial/camfed"]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 201.0
-offset_right = 642.0
-offset_bottom = 250.0
+offset_left = 263.0
+offset_top = 179.0
+offset_right = 819.0
+offset_bottom = 244.0
+theme_override_fonts/font = SubResource("SystemFont_7ixpq")
 text = "Tvoje zbývající energie a čas je tady, 
 pokud se ti energie dostane na nulu tak se ti vše vypne. "
 
 [node name="Label2" type="Label" parent="Office/Tutorial/camfed"]
 layout_mode = 0
-offset_left = 700.0
-offset_top = 392.0
-offset_right = 1470.0
-offset_bottom = 467.0
+offset_left = 705.0
+offset_top = 341.0
+offset_right = 1475.0
+offset_bottom = 416.0
+theme_override_fonts/font = ExtResource("55_ms3bu")
 text = "Tvůj camera feed spolu se zvolenou kamerou je tady. 
 Pokud není animatronic vidět. je možné že se nachází u některých z tvých bočních vstupových dveří.
 Přesunutím myši na okraj obrazovky se otočíš danným směrem"
@@ -793,10 +806,11 @@ text = "Pro zapnutí svítilny zmáčkni a podrž toto tlačítko"
 
 [node name="Label" type="Label" parent="Office/Tutorial/sideview"]
 layout_mode = 0
-offset_left = 753.0
-offset_top = 917.0
-offset_right = 1319.0
-offset_bottom = 989.0
+offset_left = 692.0
+offset_top = 927.0
+offset_right = 1409.0
+offset_bottom = 999.0
+theme_override_fonts/font = ExtResource("55_ms3bu")
 text = "Pokud se animatronic nachází u tvých dveří, musíš na něj chvilku posvítit."
 
 [node name="Buttons" type="Control" parent="Office"]
