@@ -101,7 +101,7 @@ func _on_button_right_side_mouse_entered() -> void:
 	elif GlobalVars.view_left == true:
 		GlobalVars.view_front = true
 		GlobalVars.view_left = false
-		$AnimationPlayerOffice.play("animation_view_left_back")
+		$AnimationPlayerOffice.play_backwards("animation_view_left")
 		$Light.set_visible(false)
 		$Buttons.set_visible(false)
 		await get_tree().create_timer(0.4).timeout
@@ -130,7 +130,7 @@ func _on_button_left_side_mouse_entered():
 	elif GlobalVars.view_right == true:
 		GlobalVars.view_front = true
 		GlobalVars.view_right = false
-		$AnimationPlayerOffice.play("animation_view_right_back")
+		$AnimationPlayerOffice.play_backwards("animation_view_right")
 		$Light.set_visible(false)
 		$Buttons.set_visible(false)
 		await get_tree().create_timer(0.4).timeout
