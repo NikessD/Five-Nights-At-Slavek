@@ -22,23 +22,30 @@ grow_vertical = 2
 script = ExtResource("1_leokh")
 
 [node name="DefaultBackgroundKreslicíPlátno1" type="Sprite2D" parent="."]
-position = Vector2(972, 541)
+position = Vector2(955, 541)
 scale = Vector2(1.02083, 1.04259)
 texture = ExtResource("2_srivd")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_left = 645.0
-offset_top = 394.0
-offset_right = 685.0
-offset_bottom = 434.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.0
+offset_top = -90.55
+offset_right = 388.0
+offset_bottom = 90.55
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Night" type="Label" parent="CenterContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 3.8
 theme_override_fonts/font = SubResource("SystemFont_0eiwq")
 theme_override_font_sizes/font_size = 181
-text = "SSSSS"
+text = "NIGHT 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 

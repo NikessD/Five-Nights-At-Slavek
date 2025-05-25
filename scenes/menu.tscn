@@ -118,8 +118,8 @@ text = "QUIT"
 flat = true
 
 [node name="FnasLogo" type="Sprite2D" parent="Menu"]
-position = Vector2(249, 257)
-scale = Vector2(0.193882, 0.193882)
+position = Vector2(216, 296)
+scale = Vector2(0.179951, 0.179951)
 texture = ExtResource("5_mj5lg")
 
 [node name="VersionNumber" type="Label" parent="Menu"]
@@ -204,8 +204,9 @@ uppercase = true
 
 [node name="Master volume" type="HSlider" parent="Settings/MarginContainer/VBoxContainer"]
 layout_mode = 2
-max_value = 1.5
+max_value = 2.0
 step = 0.01
+value = 1.0
 tick_count = 11
 ticks_on_borders = true
 
@@ -223,7 +224,7 @@ uppercase = true
 layout_mode = 2
 max_value = 1.5
 step = 0.01
-value = 0.5
+value = 0.75
 tick_count = 11
 ticks_on_borders = true
 
@@ -241,7 +242,7 @@ uppercase = true
 layout_mode = 2
 max_value = 1.5
 step = 0.01
-value = 0.5
+value = 0.75
 tick_count = 11
 ticks_on_borders = true
 

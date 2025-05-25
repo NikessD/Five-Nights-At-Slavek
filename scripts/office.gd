@@ -155,8 +155,8 @@ func dvere_tutorial():
 func _on_golden_s_timer_timeout() -> void:
 	GoldenS_camera = 0
 	GoldenS_random_number = randi_range(0, 20)
-	if GoldenS_random_number <= GlobalVars.golden_s_AI:
-		GoldenS_camera = randi_range(0, 11)
+	if GoldenS_random_number <= GlobalVars.golden_s_AI and GlobalVars.golden_s_AI > 0:
+		GoldenS_camera = randi_range(0, 10)
 		GoldenS_timer = randi_range(80, 120) / GlobalVars.golden_s_AI
 		await get_tree().create_timer(GoldenS_timer).timeout
 

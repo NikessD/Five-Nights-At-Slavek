@@ -1526,10 +1526,10 @@ wait_time = 2.277
 autostart = true
 
 [connection signal="timeout" from="Office/GoldenS/GoldenSTimer" to="Office" method="_on_golden_s_timer_timeout"]
-[connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_cam_1_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_button_2_pressed"]
-[connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_cam_2_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_cam_1_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_cam_2_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam3button" to="Office" method="_on_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam3button" to="Office" method="_on_cam_3_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam4button" to="Office" method="_on_button_5_pressed"]

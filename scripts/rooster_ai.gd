@@ -85,7 +85,7 @@ func _on_timer_rooster_timeout() -> void:
 	print(animatronic_rooster_camera)
 	animatronic_random_number = randi_range(0, 20)
 	if animatronic_rooster_camera == 7:
-		cam_8()
+		cam_7()
 		if animatronic_rooster_camera == GlobalVars.camera_clicked:
 			CamMovementStatic()
 			await get_tree().create_timer(0.5).timeout	
@@ -119,9 +119,9 @@ func _on_timer_rooster_timeout() -> void:
 				10:
 					cam_10()
 					
-	if animatronic_rooster_camera == GlobalVars.camera_clicked:
-		CamMovementStatic()
-		await get_tree().create_timer(0.5).timeout	
+			if animatronic_rooster_camera == GlobalVars.camera_clicked:
+				CamMovementStatic()
+				await get_tree().create_timer(0.5).timeout	
 	Cam_Change()
 
 
