@@ -4,10 +4,8 @@ extends Control
 var head_position = "stred"
 var door_view_first = 0
 var cam_view_first = 0
+
 # Animatronic var
-#var animatronic_random_number = 0
-#var GlobalVars.animatronic_rooster_AI  = 1
-#var animatronic_rooster_camera = 0
 var hour = 0
 var game_over = 0
 
@@ -140,47 +138,7 @@ func _on_button_left_side_mouse_entered():
 	if GlobalVars.night == 1 and door_view_first == 0:
 		dvere_tutorial()
 
-# Pohyb
-#func _on_timer_rooster_timeout() -> void:
-	#animatronic_random_number = randi_range(0, 20)
-	#
-	#if GlobalVars.animatronic_rooster_AI  <= animatronic_random_number:
-		#if animatronic_rooster_camera == 6 and GlobalVars.light_button_is_pressed == true:
-			#animatronic_rooster_camera += randi_range(-3,0)
-			#$RunningSound.play()
-		#elif animatronic_rooster_camera == 9 and GlobalVars.light_button_is_pressed == true:
-			#animatronic_rooster_camera += randi_range(-6,-4)
-			#$RunningSound.play()
-		#elif animatronic_rooster_camera == 6 and GlobalVars.light_button_is_pressed == false :
-			## Jumpscare animace
-			#animatronic_random_number = 0
-			#game_over = 1
-			#get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
-			#
-		#elif animatronic_rooster_camera == 9 and GlobalVars.light_button_is_pressed == false :
-			## Jumpscare animace
-			#animatronic_random_number = 0
-			#game_over = 1
-			#get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
-			#
-		#else:
-			#if animatronic_rooster_camera == 5:
-				#animatronic_rooster_camera += randi_range(1,2)
-				#$WalkSound.play()
-			#elif animatronic_rooster_camera < 4:
-				#animatronic_rooster_camera += randi_range(1,2)
-				#absi(animatronic_rooster_camera)
-				#
-			#else:
-				#animatronic_rooster_camera += 1
-				#
-				#if animatronic_rooster_camera >= 7:
-					#$WalkSound.play()
-					#
-				#elif animatronic_rooster_camera == 5:
-					#$WalkSound.play()
-	#else:
-		#pass
+
 
 #Hodiny
 func _on_timer_hour_timeout() -> void:
@@ -193,17 +151,7 @@ func dvere_tutorial():
 	await get_tree().create_timer(7).timeout
 	$Tutorial/sideview.set_visible(false)
 		
-
-#func _on_light_button_down() -> void:
-	#$PowerUse.value += 25
-	#$FlashLightSound.play()
-	#GlobalVars.light_button_is_pressed = true
-#
-#func _on_light_button_up() -> void:
-	#$PowerUse.value -= 25
-	#$FlashLightSound.stop()
-	#GlobalVars.light_button_is_pressed = false
-
+		
 func _on_golden_s_timer_timeout() -> void:
 	GoldenS_camera = 0
 	GoldenS_random_number = randi_range(0, 20)

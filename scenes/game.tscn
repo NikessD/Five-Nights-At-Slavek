@@ -280,6 +280,59 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2gnni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2gnni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2gnni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2gnni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2gnni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_s0g06")
+}],
+"loop": false,
+"name": &"animation_view_left_light_walk_in",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_1yg85")
 }],
 "loop": true,
 "name": &"animation_view_left_look",
@@ -378,6 +431,59 @@ animations = [{
 }],
 "loop": true,
 "name": &"animation_view_right_light",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_ounyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ounyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ounyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ounyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ounyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iekjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_i1hsc")
+}],
+"loop": false,
+"name": &"animation_view_right_light_walk_in",
 "speed": 30.0
 }, {
 "frames": [{
@@ -1148,7 +1254,7 @@ volume_db = -37.477
 position = Vector2(958, 536)
 scale = Vector2(0.773958, 0.773958)
 sprite_frames = SubResource("SpriteFrames_pidd4")
-animation = &"animation_view_front"
+animation = &"animation_view_left_light_walk_in"
 
 [node name="PowerUse" type="ProgressBar" parent="Office"]
 visible = false
@@ -1420,10 +1526,10 @@ wait_time = 2.277
 autostart = true
 
 [connection signal="timeout" from="Office/GoldenS/GoldenSTimer" to="Office" method="_on_golden_s_timer_timeout"]
-[connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_button_2_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_cam_1_button_pressed"]
-[connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_button_2_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_cam_2_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_button_4_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam3button" to="Office" method="_on_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam3button" to="Office" method="_on_cam_3_button_pressed"]
 [connection signal="pressed" from="Office/UiPc/cam4button" to="Office" method="_on_button_5_pressed"]

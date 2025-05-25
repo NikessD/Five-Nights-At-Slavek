@@ -129,7 +129,7 @@ offset_top = 1053.0
 offset_right = 1918.0
 offset_bottom = 1076.0
 theme_override_fonts/font = ExtResource("6_ufwb2")
-text = "VER - 0.6.0"
+text = "VER - 0.6.1"
 
 [node name="LoadingScreen" type="Control" parent="."]
 visible = false

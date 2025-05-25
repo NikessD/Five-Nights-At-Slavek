@@ -18,11 +18,7 @@ var animatronic_rooster_door_var = 0
 func _ready() -> void:
 	pass
 func _process(delta: float) -> void:
-
-	if(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 7):
-		$"../Office/AnimationPlayerOffice".play("animation_view_left_animatronic")
-	elif(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 11):
-		$"../Office/AnimationPlayerOffice".play("animation_view_right_animatronic")
+	pass
 		
 
 func CamMovementStatic():
@@ -88,37 +84,45 @@ func _on_timer_rooster_timeout() -> void:
 		
 	print(animatronic_rooster_camera)
 	animatronic_random_number = randi_range(0, 20)
-	if animatronic_random_number <= GlobalVars.animatronic_rooster_AI :
+	if animatronic_rooster_camera == 7:
+		cam_8()
 		if animatronic_rooster_camera == GlobalVars.camera_clicked:
 			CamMovementStatic()
 			await get_tree().create_timer(0.5).timeout	
-		match animatronic_rooster_camera:
-			1:
-				cam_1()
-			2:
-				cam_2()
-			3:
-				cam_3()
-			4:
-				cam_4()
-			5:
-				cam_5()
-			6:
-				cam_6()
-			7:
-				cam_7()
-			8:
-				cam_8()
-			9:
-				cam_9()
-			10:
-				cam_10()
-			11:
-				cam_11()
+	elif animatronic_rooster_camera == 11:
+		cam_11()
 		if animatronic_rooster_camera == GlobalVars.camera_clicked:
 			CamMovementStatic()
 			await get_tree().create_timer(0.5).timeout	
-		Cam_Change()
+	else:
+		if animatronic_random_number <= GlobalVars.animatronic_rooster_AI :
+			if animatronic_rooster_camera == GlobalVars.camera_clicked:
+				CamMovementStatic()
+				await get_tree().create_timer(0.5).timeout	
+			match animatronic_rooster_camera:
+				1:
+					cam_1()
+				2:
+					cam_2()
+				3:
+					cam_3()
+				4:
+					cam_4()
+				5:
+					cam_5()
+				6:
+					cam_6()
+				8:
+					cam_8()
+				9:
+					cam_9()
+				10:
+					cam_10()
+					
+	if animatronic_rooster_camera == GlobalVars.camera_clicked:
+		CamMovementStatic()
+		await get_tree().create_timer(0.5).timeout	
+	Cam_Change()
 
 
 
@@ -147,12 +151,15 @@ func cam_4():
 func cam_5():
 	$"../Office/WalkSound".play()
 	animatronic_rooster_camera += randi_range(1,2)
-	
+	if GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 7:
+		$"../Office/AnimationPlayerOffice".play("animation_view_left_light_walk_in")
 func cam_6():
 	$"../Office/WalkSound".play()
 	animatronic_rooster_door_var = randi_range(1,2)
 	if animatronic_rooster_door_var == 1:
 		animatronic_rooster_camera += 1
+		if GlobalVars.light_button_is_pressed == true:
+			$"../Office/AnimationPlayerOffice".play("animation_view_left_light_walk_in")
 	elif animatronic_rooster_door_var == 2:
 		animatronic_rooster_camera -= 1
 	
@@ -173,7 +180,8 @@ func cam_7():
 func cam_8():
 	$"../Office/WalkSound".play()
 	animatronic_rooster_camera += randi_range(1,3)
-
+	if GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 11:
+		$"../Office/AnimationPlayerOffice".play("animation_view_right_light_walk_in")
 func cam_9():
 	$"../Office/WalkSound".play()
 	animatronic_rooster_door_var = randi_range(1,4)
@@ -181,6 +189,8 @@ func cam_9():
 		animatronic_rooster_camera += 1
 	elif animatronic_rooster_door_var == 2 or 3:
 		animatronic_rooster_camera += 2
+		if GlobalVars.light_button_is_pressed == true:
+			$"../Office/AnimationPlayerOffice".play("animation_view_right_light_walk_in")
 	else:
 		animatronic_rooster_camera	-= 4
 	
@@ -191,6 +201,8 @@ func cam_10():
 		animatronic_rooster_camera -= 1
 	elif animatronic_rooster_door_var == 2:
 		animatronic_rooster_camera += 1
+		if GlobalVars.light_button_is_pressed == true:
+			$"../Office/AnimationPlayerOffice".play("animation_view_right_light_walk_in")
 	
 func cam_11():
 	if GlobalVars.light_button_is_pressed == true:
@@ -213,8 +225,12 @@ func _on_light_button_down() -> void:
 	$"../Office/FlashLightSound".play() 
 	GlobalVars.light_button_is_pressed = true
 	
-	if(GlobalVars.view_left == true):
+	if(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 7 and GlobalVars.view_left == true):
+		$"../Office/AnimationPlayerOffice".play("animation_view_left_animatronic")
+	elif(GlobalVars.view_left == true):
 		$"../Office/AnimationPlayerOffice".play("animation_view_left_light")
+	elif(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 11 and GlobalVars.view_right == true):
+		$"../Office/AnimationPlayerOffice".play("animation_view_right_animatronic")
 	elif(GlobalVars.view_right == true):
 		$"../Office/AnimationPlayerOffice".play("animation_view_right_light")
 	else:
