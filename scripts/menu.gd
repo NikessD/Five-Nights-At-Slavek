@@ -18,7 +18,7 @@ func _on_play_pressed() -> void:
 	$LoadingScreen/NightNumber.text = "NIGHT " + str(GlobalVars.night)
 	$Menu.set_visible(false)
 	$LoadingScreen.set_visible(true)
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 	
 func load_night():

@@ -16,7 +16,7 @@ var animatronic_rooster_door_var = 0
 
 
 func _ready() -> void:
-	$"../Office/UiPc/CamFeed/X48n0".set_visible(false)
+	pass
 func _process(delta: float) -> void:
 
 	if(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 7):

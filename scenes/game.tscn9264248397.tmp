@@ -1,4 +1,4 @@
-[gd_scene load_steps=188 format=3 uid="uid://dp1pppkrg6cqj"]
+[gd_scene load_steps=189 format=3 uid="uid://dp1pppkrg6cqj"]
 
 [ext_resource type="Script" uid="uid://dq58rj15aheoq" path="res://scripts/office.gd" id="1_1o6bn"]
 [ext_resource type="AudioStream" uid="uid://bxt0qmpqksl4l" path="res://sounds/OminiousSound1.mp3" id="2_spd4q"]
@@ -1072,6 +1072,8 @@ font_size = 40
 [sub_resource type="SystemFont" id="SystemFont_7ixpq"]
 font_names = PackedStringArray("LCD Solid")
 
+[sub_resource type="Theme" id="Theme_sgl2t"]
+
 [node name="Game" type="Node2D" groups=["Persist"]]
 
 [node name="RoosterAi" type="Control" parent="."]
@@ -1343,16 +1345,22 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Label2" type="Label" parent="Office/Tutorial/sideview"]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 963.0
+offset_right = 1218.0
+offset_bottom = 986.0
+text = "Pro zapnutí svítilny zmáčkni a podrž toto tlačítko"
+
 [node name="Label" type="Label" parent="Office/Tutorial/sideview"]
 layout_mode = 0
-offset_left = 624.0
-offset_top = 867.0
-offset_right = 1351.0
-offset_bottom = 939.0
+offset_left = 697.0
+offset_top = 942.0
+offset_right = 1414.0
+offset_bottom = 1014.0
 theme_override_fonts/font = ExtResource("55_ms3bu")
-text = "Pokud se animatronic nachází u tvých dveří, musíš na něj chvilku posvítit. 
-Pro zapnutí svítilny zmáčkni a podrž toto tlačítko"
-horizontal_alignment = 1
+text = "Pokud se animatronic nachází u tvých dveří, musíš na něj chvilku posvítit."
 
 [node name="Buttons" type="Control" parent="Office"]
 layout_mode = 3
@@ -1392,8 +1400,9 @@ offset_top = 847.0
 offset_right = 1193.0
 offset_bottom = 1153.0
 focus_mode = 0
+theme = SubResource("Theme_sgl2t")
+theme_override_icons/icon = ExtResource("176_bdqdv")
 toggle_mode = true
-icon = ExtResource("176_bdqdv")
 flat = true
 
 [node name="DebugLabel" type="Label" parent="Office"]
