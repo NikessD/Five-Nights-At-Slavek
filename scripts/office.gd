@@ -216,39 +216,52 @@ func _on_golden_s_timer_timeout() -> void:
 		pass
 
 
-func _on_button_8_pressed() -> void:
-	GlobalVars.camera_clicked = 9
-	$CamSelected.play()
 
-func _on_button_2_pressed() -> void:
+func _on_cam_1_button_pressed() -> void:
 	GlobalVars.camera_clicked = 1
+	GlobalVars.camera_ID = 1
 	$CamSelected.play()
 
-func _on_button_3_pressed() -> void:
-	GlobalVars.camera_clicked = 5
-	$CamSelected.play()
 
-func _on_button_4_pressed() -> void:
+func _on_cam_2_button_pressed() -> void:
 	GlobalVars.camera_clicked = 2
-	$CamSelected.play()
-func _on_button_5_pressed() -> void:
-	GlobalVars.camera_clicked = 4
-	$CamSelected.play()
-
-func _on_button_7_pressed() -> void:
-	GlobalVars.camera_clicked = 7
-	$CamSelected.play()
-
-func _on_button_9_pressed() -> void:
-	GlobalVars.camera_clicked = 10
+	GlobalVars.camera_ID = 2
 	$CamSelected.play()
 
 
-func _on_button_6_pressed() -> void:
-	GlobalVars.camera_clicked = 6
-	$CamSelected.play()
-
-
-func _on_button_pressed() -> void:
+func _on_cam_3_button_pressed() -> void:
 	GlobalVars.camera_clicked = 3
-	$CamSelected.play()
+	GlobalVars.camera_ID = 3
+	$CamSelected.play() 
+
+
+func _on_cam_4_button_pressed() -> void:
+	GlobalVars.camera_clicked = 4
+	GlobalVars.camera_ID = 4
+	$CamSelected.play() 
+
+
+func _on_cam_5_button_pressed() -> void:
+	GlobalVars.camera_clicked = 5
+	GlobalVars.camera_ID = 5
+	$CamSelected.play() 
+
+func _on_cam_6_button_pressed() -> void:
+	GlobalVars.camera_clicked = 6
+	GlobalVars.camera_ID = 6
+	$CamSelected.play() 
+
+func _on_cam_7_button_pressed() -> void:
+	GlobalVars.camera_clicked = 8
+	GlobalVars.camera_ID = 7
+	$CamSelected.play() 
+	
+func _on_cam_8_button_pressed() -> void:
+	GlobalVars.camera_clicked = 9
+	GlobalVars.camera_ID = 8
+	$CamSelected.play() 
+
+func _on_cam_9_button_pressed() -> void:
+	GlobalVars.camera_clicked = 10
+	GlobalVars.camera_ID = 9
+	$CamSelected.play() 

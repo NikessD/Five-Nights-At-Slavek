@@ -38,7 +38,9 @@ func load_night():
 		5:
 			GlobalVars.golden_s_AI = 6
 			GlobalVars.animatronic_rooster_AI = 12
-	
+		6:
+			GlobalVars.golden_s_AI = 20
+			GlobalVars.animatronic_rooster_AI = 20
 	
 func _on_options_pressed() -> void:
 	$Menu/ClickSound.play()

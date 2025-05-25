@@ -441,7 +441,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("45_0rmfi")
+"texture": ExtResource("47_3x28f")
 }],
 "loop": false,
 "name": &"Cam6Animatronic",
@@ -449,7 +449,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("46_xbak0")
+"texture": ExtResource("48_l6q63")
 }],
 "loop": true,
 "name": &"Cam6Nothing",
@@ -457,7 +457,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("47_3x28f")
+"texture": ExtResource("45_0rmfi")
 }],
 "loop": false,
 "name": &"Cam7Animatronic",
@@ -465,7 +465,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("48_l6q63")
+"texture": ExtResource("46_xbak0")
 }],
 "loop": true,
 "name": &"Cam7Nothing",
@@ -646,7 +646,7 @@ position = Vector2(1154.27, 588.267)
 rotation = -5.54186e-05
 scale = Vector2(0.3764, 0.361767)
 sprite_frames = SubResource("SpriteFrames_7025r")
-animation = &"Cam5Nothing"
+animation = &"Cam7Nothing"
 
 [node name="X48n0" type="Sprite2D" parent="Office/UiPc/CamFeed"]
 visible = false
@@ -704,7 +704,7 @@ text = "0 CAM
 "
 label_settings = SubResource("LabelSettings_xnu4a")
 
-[node name="Button2" type="Button" parent="Office/UiPc"]
+[node name="cam1button" type="Button" parent="Office/UiPc"]
 layout_mode = 0
 offset_left = 536.0
 offset_top = 510.0
@@ -712,15 +712,7 @@ offset_right = 567.0
 offset_bottom = 538.0
 focus_mode = 0
 
-[node name="Button3" type="Button" parent="Office/UiPc"]
-layout_mode = 0
-offset_left = 502.0
-offset_top = 669.0
-offset_right = 532.0
-offset_bottom = 697.0
-focus_mode = 0
-
-[node name="Button4" type="Button" parent="Office/UiPc"]
+[node name="cam2button" type="Button" parent="Office/UiPc"]
 layout_mode = 0
 offset_left = 537.0
 offset_top = 579.0
@@ -728,7 +720,15 @@ offset_right = 567.0
 offset_bottom = 607.0
 focus_mode = 0
 
-[node name="Button5" type="Button" parent="Office/UiPc"]
+[node name="cam3button" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 579.0
+offset_right = 495.0
+offset_bottom = 606.0
+focus_mode = 0
+
+[node name="cam4button" type="Button" parent="Office/UiPc"]
 layout_mode = 0
 offset_left = 537.0
 offset_top = 647.0
@@ -736,31 +736,15 @@ offset_right = 567.0
 offset_bottom = 674.0
 focus_mode = 0
 
-[node name="Button7" type="Button" parent="Office/UiPc"]
+[node name="cam5button" type="Button" parent="Office/UiPc"]
 layout_mode = 0
 offset_left = 502.0
-offset_top = 750.0
-offset_right = 533.0
-offset_bottom = 777.0
+offset_top = 669.0
+offset_right = 532.0
+offset_bottom = 697.0
 focus_mode = 0
 
-[node name="Button9" type="Button" parent="Office/UiPc"]
-layout_mode = 0
-offset_left = 632.0
-offset_top = 702.0
-offset_right = 662.0
-offset_bottom = 729.0
-focus_mode = 0
-
-[node name="Button8" type="Button" parent="Office/UiPc"]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 749.0
-offset_right = 603.0
-offset_bottom = 776.0
-focus_mode = 0
-
-[node name="Button6" type="Button" parent="Office/UiPc"]
+[node name="cam7button" type="Button" parent="Office/UiPc"]
 layout_mode = 0
 offset_left = 573.0
 offset_top = 669.0
@@ -768,12 +752,28 @@ offset_right = 603.0
 offset_bottom = 696.0
 focus_mode = 0
 
-[node name="Button" type="Button" parent="Office/UiPc"]
+[node name="cam6button" type="Button" parent="Office/UiPc"]
 layout_mode = 0
-offset_left = 465.0
-offset_top = 579.0
-offset_right = 495.0
-offset_bottom = 606.0
+offset_left = 502.0
+offset_top = 750.0
+offset_right = 533.0
+offset_bottom = 777.0
+focus_mode = 0
+
+[node name="cam8button" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 749.0
+offset_right = 603.0
+offset_bottom = 776.0
+focus_mode = 0
+
+[node name="cam9button" type="Button" parent="Office/UiPc"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 702.0
+offset_right = 662.0
+offset_bottom = 729.0
 focus_mode = 0
 
 [node name="Tutorial" type="Control" parent="Office"]
@@ -905,15 +905,24 @@ wait_time = 2.277
 autostart = true
 
 [connection signal="timeout" from="Office/GoldenS/GoldenSTimer" to="Office" method="_on_golden_s_timer_timeout"]
-[connection signal="pressed" from="Office/UiPc/Button2" to="Office" method="_on_button_2_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button3" to="Office" method="_on_button_3_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button4" to="Office" method="_on_button_4_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button5" to="Office" method="_on_button_5_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button7" to="Office" method="_on_button_7_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button9" to="Office" method="_on_button_9_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button8" to="Office" method="_on_button_8_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button6" to="Office" method="_on_button_6_pressed"]
-[connection signal="pressed" from="Office/UiPc/Button" to="Office" method="_on_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_cam_1_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam1button" to="Office" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_cam_2_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam2button" to="Office" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam3button" to="Office" method="_on_cam_3_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam3button" to="Office" method="_on_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam4button" to="Office" method="_on_cam_4_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam4button" to="Office" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam5button" to="Office" method="_on_cam_5_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam5button" to="Office" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam7button" to="Office" method="_on_cam_7_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam7button" to="Office" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam6button" to="Office" method="_on_cam_6_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam6button" to="Office" method="_on_button_7_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam8button" to="Office" method="_on_cam_8_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam8button" to="Office" method="_on_button_8_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam9button" to="Office" method="_on_cam_9_button_pressed"]
+[connection signal="pressed" from="Office/UiPc/cam9button" to="Office" method="_on_button_9_pressed"]
 [connection signal="mouse_entered" from="Office/Buttons/ButtonRightSide" to="Office" method="_on_button_right_side_mouse_entered"]
 [connection signal="mouse_entered" from="Office/Buttons/ButtonLeftSide" to="Office" method="_on_button_left_side_mouse_entered"]
 [connection signal="button_down" from="Office/Light" to="RoosterAi" method="_on_light_button_down"]
