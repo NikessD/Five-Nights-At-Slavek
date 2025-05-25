@@ -18,8 +18,23 @@ var animatronic_rooster_door_var = 0
 func _ready() -> void:
 	$"../Office/UiPc/CamFeed/X48n0".set_visible(false)
 func _process(delta: float) -> void:
-	$"../Office/UiPc/Cameras".text =  "CAM " + str(GlobalVars.camera_ID) 
 
+	if(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 7):
+		$"../Office/AnimationPlayerOffice".play("animation_view_left_animatronic")
+	elif(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 11):
+		$"../Office/AnimationPlayerOffice".play("animation_view_right_animatronic")
+		
+
+func CamMovementStatic():
+	$"../Office/UiPc/CamFeed/CameraFeed".play("Cam9")
+	$"../Office/CamBuzzSound".play()
+	await get_tree().create_timer(0.5).timeout	
+	$"../Office/CamBuzzSound".stop()
+
+
+func Cam_Change():
+	$"../Office/UiPc/Cameras".text =  "CAM " + str(GlobalVars.camera_ID) 
+	
 	if (GlobalVars.camera_clicked == animatronic_rooster_camera):
 		match GlobalVars.camera_clicked:
 				1:
@@ -39,7 +54,7 @@ func _process(delta: float) -> void:
 				9:
 					$"../Office/UiPc/CamFeed/CameraFeed".play("Cam8Animatronic")
 				10:
-					$"../Office/UiPc/CamFeed/CameraFeed".play("Cam9Animatronic")
+					$"../Office/UiPc/CamFeed/CameraFeed".play("Cam9")
 					
 	elif (GlobalVars.camera_clicked != animatronic_rooster_camera):
 		match GlobalVars.camera_clicked:
@@ -60,19 +75,23 @@ func _process(delta: float) -> void:
 			9:
 				$"../Office/UiPc/CamFeed/CameraFeed".play("Cam8Nothing")
 			10:
-				$"../Office/UiPc/CamFeed/CameraFeed".play("Cam9Nothing")
-		
-	if(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 7):
-		$"../Office/AnimationPlayerOffice".play("animation_view_left_animatronic")
-	elif(GlobalVars.light_button_is_pressed == true and animatronic_rooster_camera == 11):
-		$"../Office/AnimationPlayerOffice".play("animation_view_right_animatronic")
-		
-	
+				$"../Office/UiPc/CamFeed/CameraFeed".play("Cam9")
+				
+	if GlobalVars.camera_clicked == 10:
+		$"../Office/CamBuzzSound".play()
+	else:
+		$"../Office/CamBuzzSound".stop()
+
+
 
 func _on_timer_rooster_timeout() -> void:
+		
 	print(animatronic_rooster_camera)
 	animatronic_random_number = randi_range(0, 20)
 	if animatronic_random_number <= GlobalVars.animatronic_rooster_AI :
+		if animatronic_rooster_camera == GlobalVars.camera_clicked:
+			CamMovementStatic()
+			await get_tree().create_timer(0.5).timeout	
 		match animatronic_rooster_camera:
 			1:
 				cam_1()
@@ -96,8 +115,11 @@ func _on_timer_rooster_timeout() -> void:
 				cam_10()
 			11:
 				cam_11()
+		if animatronic_rooster_camera == GlobalVars.camera_clicked:
+			CamMovementStatic()
+			await get_tree().create_timer(0.5).timeout	
+		Cam_Change()
 
-	
 
 
 func cam_left_side():
@@ -108,19 +130,24 @@ func cam_right_side():
 
 func cam_1():
 	animatronic_rooster_camera += 1
+	
 func cam_2():
 	animatronic_rooster_camera += randi_range(1,2)
+	
 func cam_3():
 	animatronic_rooster_camera -= 1
+	
 func cam_4():
 	var side_choose = randi_range(1, 2)
 	if side_choose == 1:
 		cam_left_side()
 	else:
 		cam_right_side()
+	
 func cam_5():
 	$"../Office/WalkSound".play()
 	animatronic_rooster_camera += randi_range(1,2)
+	
 func cam_6():
 	$"../Office/WalkSound".play()
 	animatronic_rooster_door_var = randi_range(1,2)
@@ -128,6 +155,7 @@ func cam_6():
 		animatronic_rooster_camera += 1
 	elif animatronic_rooster_door_var == 2:
 		animatronic_rooster_camera -= 1
+	
 func cam_7():
 	if GlobalVars.light_button_is_pressed == true:
 		$"../Office/AnimationPlayerOffice".play("animation_view_left_scared_away")

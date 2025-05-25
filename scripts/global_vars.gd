@@ -4,7 +4,7 @@ var view_left = false
 var view_right = false
 var view_front = true
 var camera_clicked = 1
-var camera_ID 
+var camera_ID = 1
 var night_number = 1
 var light_button_is_pressed = false
 var night = 6

@@ -221,47 +221,51 @@ func _on_cam_1_button_pressed() -> void:
 	GlobalVars.camera_clicked = 1
 	GlobalVars.camera_ID = 1
 	$CamSelected.play()
-
+	get_node("../RoosterAi").Cam_Change()
 
 func _on_cam_2_button_pressed() -> void:
 	GlobalVars.camera_clicked = 2
 	GlobalVars.camera_ID = 2
 	$CamSelected.play()
-
+	get_node("../RoosterAi").Cam_Change()
 
 func _on_cam_3_button_pressed() -> void:
 	GlobalVars.camera_clicked = 3
 	GlobalVars.camera_ID = 3
 	$CamSelected.play() 
-
+	get_node("../RoosterAi").Cam_Change()	
 
 func _on_cam_4_button_pressed() -> void:
 	GlobalVars.camera_clicked = 4
 	GlobalVars.camera_ID = 4
 	$CamSelected.play() 
-
+	get_node("../RoosterAi").Cam_Change()
 
 func _on_cam_5_button_pressed() -> void:
 	GlobalVars.camera_clicked = 5
 	GlobalVars.camera_ID = 5
 	$CamSelected.play() 
-
+	get_node("../RoosterAi").Cam_Change()
+	
 func _on_cam_6_button_pressed() -> void:
 	GlobalVars.camera_clicked = 6
 	GlobalVars.camera_ID = 6
 	$CamSelected.play() 
-
+	get_node("../RoosterAi").Cam_Change()
+	
 func _on_cam_7_button_pressed() -> void:
 	GlobalVars.camera_clicked = 8
 	GlobalVars.camera_ID = 7
 	$CamSelected.play() 
-	
+	get_node("../RoosterAi").Cam_Change()
+		
 func _on_cam_8_button_pressed() -> void:
 	GlobalVars.camera_clicked = 9
 	GlobalVars.camera_ID = 8
 	$CamSelected.play() 
-
+	get_node("../RoosterAi").Cam_Change()
 func _on_cam_9_button_pressed() -> void:
 	GlobalVars.camera_clicked = 10
 	GlobalVars.camera_ID = 9
 	$CamSelected.play() 
+	get_node("../RoosterAi").Cam_Change()
