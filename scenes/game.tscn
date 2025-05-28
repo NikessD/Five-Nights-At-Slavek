@@ -1,4 +1,4 @@
-[gd_scene load_steps=188 format=3 uid="uid://dp1pppkrg6cqj"]
+[gd_scene load_steps=215 format=3 uid="uid://dp1pppkrg6cqj"]
 
 [ext_resource type="Script" uid="uid://dq58rj15aheoq" path="res://scripts/office.gd" id="1_1o6bn"]
 [ext_resource type="AudioStream" uid="uid://bxt0qmpqksl4l" path="res://sounds/OminiousSound1.mp3" id="2_spd4q"]
@@ -11,31 +11,56 @@
 [ext_resource type="AudioStream" uid="uid://dsfejvc4etgcy" path="res://sounds/PowerDownSound.mp3" id="8_qouja"]
 [ext_resource type="AudioStream" uid="uid://c6wrh1kqs2vwa" path="res://sounds/CamSelected.mp3" id="10_02fa5"]
 [ext_resource type="Texture2D" uid="uid://bix8ucedl54u7" path="res://animations/office/CAM_LOOK.png" id="11_7ixpq"]
+[ext_resource type="Texture2D" uid="uid://ppbt4pfs8j33" path="res://animations/Jumpscare_left/0001.png0001.png" id="12_8djkq"]
 [ext_resource type="Texture2D" uid="uid://bd8q24pfoedpr" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0001.png" id="12_weeiq"]
+[ext_resource type="Texture2D" uid="uid://no4637tbvhf" path="res://animations/Jumpscare_left/0001.png0002.png" id="13_8wuql"]
 [ext_resource type="Texture2D" uid="uid://r7x0d7c71736" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0002.png" id="13_uxocx"]
 [ext_resource type="Texture2D" uid="uid://bfl6l7n1adcm" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0003.png" id="14_7nv0b"]
+[ext_resource type="Texture2D" uid="uid://trqekyg2osf2" path="res://animations/Jumpscare_left/0001.png0003.png" id="14_tmhwu"]
 [ext_resource type="Texture2D" uid="uid://dqkfqsrlx38yi" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0004.png" id="15_o8oq8"]
+[ext_resource type="Texture2D" uid="uid://bht8berwfehew" path="res://animations/Jumpscare_left/0001.png0004.png" id="15_oa88d"]
+[ext_resource type="Texture2D" uid="uid://cgcm46mvuwhrq" path="res://animations/Jumpscare_left/0001.png0005.png" id="16_lygv6"]
 [ext_resource type="Texture2D" uid="uid://d3iwq2tj8gjgu" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0005.png" id="16_sxt1d"]
 [ext_resource type="Texture2D" uid="uid://cmbvvlhigduul" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0006.png" id="17_2iuns"]
+[ext_resource type="Texture2D" uid="uid://c7fgut55h34ng" path="res://animations/Jumpscare_left/0001.png0006.png" id="17_ufjh3"]
 [ext_resource type="Texture2D" uid="uid://bgivtmg56hcoe" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0007.png" id="18_7gkqi"]
+[ext_resource type="Texture2D" uid="uid://ddxu5emn7ioup" path="res://animations/Jumpscare_left/0001.png0007.png" id="18_eio5l"]
+[ext_resource type="Texture2D" uid="uid://dbhpk8nkw7htn" path="res://animations/Jumpscare_left/0001.png0008.png" id="19_7l6q4"]
 [ext_resource type="Texture2D" uid="uid://c1ehsn1mg14kw" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0008.png" id="19_753oq"]
 [ext_resource type="Texture2D" uid="uid://dhg5v0v8yokh4" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0009.png" id="20_3x338"]
+[ext_resource type="Texture2D" uid="uid://diydch7u0vbsb" path="res://animations/Jumpscare_left/0001.png0009.png" id="20_jqiwq"]
 [ext_resource type="Texture2D" uid="uid://besnhtadx1d0w" path="res://animations/office/LEFT_LOOK_ANIM/0001.png0010.png" id="21_1yg85"]
+[ext_resource type="Texture2D" uid="uid://16bvx82566ke" path="res://animations/Jumpscare_left/0001.png0010.png" id="21_08jcq"]
+[ext_resource type="Texture2D" uid="uid://b3t3f3p8iddum" path="res://animations/JumpScareRight/0001.png0001.png" id="22_e07sx"]
 [ext_resource type="Texture2D" uid="uid://ck884qbgvaqt" path="res://animations/office/LEFT_LOOK/ON_ANIM.png" id="22_s0g06"]
 [ext_resource type="Texture2D" uid="uid://dipp60h57ygu5" path="res://animations/office/LEFT_LOOK/ONpng.png" id="23_2gnni"]
+[ext_resource type="Texture2D" uid="uid://8oladi3d8560" path="res://animations/JumpScareRight/0001.png0002.png" id="23_yhaf3"]
+[ext_resource type="Texture2D" uid="uid://dwd8serjfh4yc" path="res://animations/JumpScareRight/0001.png0003.png" id="24_1swxn"]
 [ext_resource type="Texture2D" uid="uid://v0jsimirvoc8" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0001.png" id="24_vgxg3"]
 [ext_resource type="Texture2D" uid="uid://2qpqd5vbllc2" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0002.png" id="25_4nbsr"]
+[ext_resource type="Texture2D" uid="uid://lq5mep6ccbm1" path="res://animations/JumpScareRight/0001.png0004.png" id="25_ub10f"]
 [ext_resource type="Texture2D" uid="uid://dxisxttqda3p8" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0003.png" id="26_fkywm"]
+[ext_resource type="Texture2D" uid="uid://be0gkqcpr5l3l" path="res://animations/JumpScareRight/0001.png0005.png" id="26_mpqr6"]
 [ext_resource type="Texture2D" uid="uid://bhgnxdi4vyxc2" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0004.png" id="27_dku7i"]
+[ext_resource type="Texture2D" uid="uid://bagb8lklp06sf" path="res://animations/JumpScareRight/0001.png0006.png" id="27_q6tk8"]
+[ext_resource type="Texture2D" uid="uid://udq6k3iuf2ib" path="res://animations/JumpScareRight/0001.png0007.png" id="28_e3n7k"]
 [ext_resource type="Texture2D" uid="uid://px8negj5xbks" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0005.png" id="28_veaf0"]
 [ext_resource type="Texture2D" uid="uid://b53twsisofvux" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0006.png" id="29_flw08"]
+[ext_resource type="Texture2D" uid="uid://ckvkdnhj4p2i1" path="res://animations/JumpScareRight/0001.png0008.png" id="29_vpp0n"]
 [ext_resource type="Texture2D" uid="uid://c0ddrbwr71rwd" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0007.png" id="30_84hbc"]
+[ext_resource type="Texture2D" uid="uid://dglt6e7lhhkrs" path="res://animations/JumpScareRight/0001.png0009.png" id="30_qkuf6"]
 [ext_resource type="Texture2D" uid="uid://bbgusanugom4l" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0008.png" id="31_15b3c"]
+[ext_resource type="Texture2D" uid="uid://c2qopjnlphw5m" path="res://animations/JumpScareRight/0001.png0010.png" id="31_nri4r"]
+[ext_resource type="Texture2D" uid="uid://dder67kv4m0c3" path="res://animations/JumpScareRight/0001.png0011.png" id="32_pvp8v"]
 [ext_resource type="Texture2D" uid="uid://1esnqs1cn7mo" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0009.png" id="32_veukt"]
 [ext_resource type="Script" uid="uid://bv2i6lqhns64l" path="res://scripts/rooster_ai.gd" id="32_wljb1"]
 [ext_resource type="Texture2D" uid="uid://ba5o4ti8rk3bg" path="res://animations/office/RIGHT_LOOK_ANIM/0001.png0010.png" id="33_nbjts"]
+[ext_resource type="Texture2D" uid="uid://btxb1xyei2uqk" path="res://animations/JumpScareRight/0001.png0012.png" id="33_rjakg"]
+[ext_resource type="Texture2D" uid="uid://f8ht5h2qdwuw" path="res://animations/JumpScareRight/0001.png0013.png" id="34_addpb"]
 [ext_resource type="Texture2D" uid="uid://ulrlfxb5rf4j" path="res://animations/office/RIGHT_LOOK/ON_ANIMATRONIC.png" id="34_i1hsc"]
+[ext_resource type="Texture2D" uid="uid://bdjtphcdsyi6t" path="res://animations/JumpScareRight/0001.png0014.png" id="35_mtq6s"]
 [ext_resource type="Texture2D" uid="uid://crf1oq2s80nbc" path="res://animations/camera_stages/cam_1/2-StageWith.png" id="36_3hbvx"]
+[ext_resource type="Texture2D" uid="uid://b71lfiv6vljst" path="res://animations/JumpScareRight/0001.png0015.png" id="36_kkdm3"]
 [ext_resource type="Texture2D" uid="uid://wbgdi46qjxb6" path="res://animations/camera_stages/cam_1/1-Stage.png" id="37_q8j3a"]
 [ext_resource type="Texture2D" uid="uid://bf0qxw7oa6wkb" path="res://animations/camera_stages/cam_2/4-DiningWith.png" id="38_ms3bu"]
 [ext_resource type="Texture2D" uid="uid://b76xd4v1xufda" path="res://animations/camera_stages/cam_3/5-Untitled5.png" id="39_7ixpq"]
@@ -56,7 +81,6 @@
 [ext_resource type="Texture2D" uid="uid://dymap122o0xpf" path="res://animations/camera_stages/cam_8/16-Untitled2 - kopie.png" id="50_weeiq"]
 [ext_resource type="Texture2D" uid="uid://dbqe51p3qe7et" path="res://animations/camera_stages/cam_static/CameraStatic00086400.jpg" id="54_bdqdv"]
 [ext_resource type="Texture2D" uid="uid://c8qydwvbai860" path="res://animations/camera_stages/cam_static/CameraStatic00086401.jpg" id="55_f4ip4"]
-[ext_resource type="SystemFont" uid="uid://5qb10ktoyk30" path="res://styles/MenuFont.tres" id="55_ms3bu"]
 [ext_resource type="Texture2D" uid="uid://chhtbycpqgyo3" path="res://animations/camera_stages/cam_static/CameraStatic00086402.jpg" id="56_4kxhu"]
 [ext_resource type="Texture2D" uid="uid://dievhikgkc1er" path="res://animations/camera_stages/cam_static/CameraStatic00086403.jpg" id="57_2gimc"]
 [ext_resource type="Texture2D" uid="uid://dxs04cpvc0ci8" path="res://animations/camera_stages/cam_static/CameraStatic00086404.jpg" id="58_vv4rj"]
@@ -176,10 +200,100 @@
 [ext_resource type="Texture2D" uid="uid://xe8wyxyjhnjq" path="res://animations/camera_stages/cam_static/CameraStatic00086518.jpg" id="172_e3pfn"]
 [ext_resource type="Texture2D" uid="uid://digjr0k4tt5o5" path="res://animations/camera_stages/cam_static/CameraStatic00086519.jpg" id="173_yfuyu"]
 [ext_resource type="Texture2D" uid="uid://cxonv5upryas2" path="res://sprites/GoldenSlávek.png" id="174_331gb"]
+[ext_resource type="FontFile" uid="uid://mou5bhoqqbqj" path="res://fonts/LcdSolid-VPzB.ttf" id="176_4kxhu"]
 [ext_resource type="Texture2D" uid="uid://wldxxn6nc2jk" path="res://sprites/LighticonOFF.png" id="176_bdqdv"]
+[ext_resource type="Texture2D" uid="uid://dru8e0it3mvlg" path="res://sprites/LifhtIconON.png" id="177_f4ip4"]
+[ext_resource type="AudioStream" uid="uid://raxqnifi6uum" path="res://sounds/Scream.mp3" id="204_8wuql"]
+[ext_resource type="AudioStream" uid="uid://dms1qvpickor2" path="res://sounds/ambient/creepyambience1.mp3" id="205_oa88d"]
+[ext_resource type="AudioStream" uid="uid://j4o5pm4okeih" path="res://sounds/ambient/creepyambience2.mp3" id="206_lygv6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pidd4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8djkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8wuql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tmhwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oa88d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lygv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ufjh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_eio5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7l6q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jqiwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_08jcq")
+}],
+"loop": false,
+"name": &"animation_jumpscare_left",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_e07sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yhaf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1swxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ub10f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mpqr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_q6tk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_e3n7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vpp0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qkuf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nri4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pvp8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_rjakg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_addpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_mtq6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kkdm3")
+}],
+"loop": false,
+"name": &"animation_jumpscare_right",
+"speed": 24.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("11_7ixpq")
@@ -1147,36 +1261,21 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="SystemFont" id="SystemFont_qouja"]
-font_names = PackedStringArray("LCD Solid")
-oversampling = 0.7
-
 [sub_resource type="LabelSettings" id="LabelSettings_wljb1"]
-font = SubResource("SystemFont_qouja")
+font = ExtResource("176_4kxhu")
 font_size = 21
-
-[sub_resource type="SystemFont" id="SystemFont_sgl2t"]
-font_names = PackedStringArray("LCD Solid")
-subpixel_positioning = 0
-msdf_size = 49
-oversampling = 0.7
 
 [sub_resource type="LabelSettings" id="LabelSettings_v8ala"]
-font = SubResource("SystemFont_sgl2t")
+font = ExtResource("176_4kxhu")
 font_size = 21
 
-[sub_resource type="SystemFont" id="SystemFont_wljb1"]
-font_names = PackedStringArray("LCD Solid")
-msdf_pixel_range = 4
-msdf_size = 35
-oversampling = 0.7
-
 [sub_resource type="LabelSettings" id="LabelSettings_xnu4a"]
-font = SubResource("SystemFont_wljb1")
+font = ExtResource("176_4kxhu")
 font_size = 40
 
-[sub_resource type="SystemFont" id="SystemFont_7ixpq"]
-font_names = PackedStringArray("LCD Solid")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4ip4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kxhu"]
 
 [node name="Game" type="Node2D" groups=["Persist"]]
 
@@ -1207,18 +1306,17 @@ autostart = true
 
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="Office"]
 stream = ExtResource("5_xnu4a")
-volume_db = 20.038
-pitch_scale = 0.77
+volume_db = 24.0
 panning_strength = 0.0
 bus = &"Ambience"
 
 [node name="CamBuzzSound" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("4_bdqdv")
-volume_db = -5.622
+volume_db = 5.621
 
 [node name="RunningSound" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("4_8qswn")
-volume_db = -2.812
+volume_db = 6.557
 pitch_scale = 1.02
 bus = &"Ambience"
 
@@ -1239,22 +1337,22 @@ bus = &"Ambience"
 
 [node name="FlashLightSound" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("6_suyxu")
+volume_db = 6.559
 bus = &"VFX"
 
 [node name="PowerDownSound" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("8_qouja")
-volume_db = -11.243
-bus = &"Ambience"
+volume_db = -22.486
 
 [node name="CamSelected" type="AudioStreamPlayer" parent="Office"]
 stream = ExtResource("10_02fa5")
-volume_db = -37.477
+volume_db = -34.666
 
 [node name="AnimationPlayerOffice" type="AnimatedSprite2D" parent="Office"]
 position = Vector2(958, 536)
 scale = Vector2(0.773958, 0.773958)
 sprite_frames = SubResource("SpriteFrames_pidd4")
-animation = &"animation_view_left_light_walk_in"
+animation = &"animation_jumpscare_right"
 
 [node name="PowerUse" type="ProgressBar" parent="Office"]
 visible = false
@@ -1328,7 +1426,7 @@ offset_left = 1393.0
 offset_top = 402.0
 offset_right = 1556.0
 offset_bottom = 487.481
-text = "0 CAM
+text = "CAM 1
 "
 label_settings = SubResource("LabelSettings_xnu4a")
 
@@ -1420,7 +1518,7 @@ offset_left = 203.0
 offset_top = 512.0
 offset_right = 392.0
 offset_bottom = 540.0
-theme_override_fonts/font = ExtResource("55_ms3bu")
+theme_override_fonts/font = ExtResource("176_4kxhu")
 text = "Tady přepínáš kamery"
 
 [node name="Label3" type="Label" parent="Office/Tutorial/camfed"]
@@ -1429,7 +1527,7 @@ offset_left = 177.0
 offset_top = 302.0
 offset_right = 733.0
 offset_bottom = 367.0
-theme_override_fonts/font = SubResource("SystemFont_7ixpq")
+theme_override_fonts/font = ExtResource("176_4kxhu")
 text = "Tvoje zbývající energie a čas je tady, 
 pokud se ti energie dostane na nulu tak se ti vše vypne. "
 
@@ -1439,7 +1537,7 @@ offset_left = 798.0
 offset_top = 274.0
 offset_right = 1744.0
 offset_bottom = 349.0
-theme_override_fonts/font = ExtResource("55_ms3bu")
+theme_override_fonts/font = ExtResource("176_4kxhu")
 text = "Tvůj camera feed spolu se zvolenou kamerou je tady. 
 Pokud není animatronic vidět. je možné že se nachází u některých z tvých bočních vstupových dveří.
 Přesunutím myši na okraj obrazovky se otočíš danným směrem"
@@ -1455,7 +1553,7 @@ offset_left = 624.0
 offset_top = 867.0
 offset_right = 1351.0
 offset_bottom = 939.0
-theme_override_fonts/font = ExtResource("55_ms3bu")
+theme_override_fonts/font = ExtResource("176_4kxhu")
 text = "Pokud se animatronic nachází u tvých dveří, musíš na něj chvilku posvítit. 
 Pro zapnutí svítilny zmáčkni a podrž toto tlačítko"
 horizontal_alignment = 1
@@ -1469,19 +1567,29 @@ offset_right = -31.0
 offset_bottom = 73.0
 
 [node name="ButtonRightSide" type="Button" parent="Office/Buttons"]
+modulate = Color(0.576471, 0.576471, 0.576471, 1)
 layout_mode = 2
-offset_left = 1901.0
-offset_top = -6.0
-offset_right = 2033.0
-offset_bottom = 1119.0
+offset_left = 1875.0
+offset_top = -16.0
+offset_right = 1995.0
+offset_bottom = 1065.0
+theme_override_fonts/font = ExtResource("176_4kxhu")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f4ip4")
+text = ">>"
 flat = true
 
 [node name="ButtonLeftSide" type="Button" parent="Office/Buttons"]
+modulate = Color(0.577008, 0.577008, 0.577008, 1)
 layout_mode = 2
-offset_left = -28.0
-offset_top = -4.0
-offset_right = 174.0
-offset_bottom = 1116.0
+offset_left = 74.0
+offset_top = -16.0
+offset_right = 194.0
+offset_bottom = 1065.0
+theme_override_fonts/font = ExtResource("176_4kxhu")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4kxhu")
+text = "<<"
 flat = true
 
 [node name="Animatronics" type="Control" parent="Office"]
@@ -1490,17 +1598,16 @@ anchors_preset = 0
 offset_right = 16.0
 offset_bottom = 5.0
 
-[node name="Light" type="Button" parent="Office"]
+[node name="LightButton" type="TextureButton" parent="Office"]
 visible = false
+modulate = Color(1, 1, 1, 0.207843)
 layout_mode = 0
 offset_left = 765.0
 offset_top = 847.0
-offset_right = 1193.0
-offset_bottom = 1153.0
-focus_mode = 0
-toggle_mode = true
-icon = ExtResource("176_bdqdv")
-flat = true
+offset_right = 1052.0
+offset_bottom = 1003.0
+texture_normal = ExtResource("176_bdqdv")
+texture_pressed = ExtResource("177_f4ip4")
 
 [node name="DebugLabel" type="Label" parent="Office"]
 layout_mode = 0
@@ -1513,12 +1620,38 @@ autostart = true
 
 [node name="ComputerFanSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("49_8qswn")
-volume_db = -27.172
+volume_db = -19.677
 pitch_scale = 0.75
 autoplay = true
 
 [node name="TimerHour" type="Timer" parent="."]
 wait_time = 45.0
+autostart = true
+
+[node name="Scream" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("204_8wuql")
+volume_db = -10.307
+pitch_scale = 0.96
+
+[node name="AmbientSounds" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Creepyambience1" type="AudioStreamPlayer" parent="AmbientSounds"]
+stream = ExtResource("205_oa88d")
+volume_db = -18.397
+pitch_scale = 0.99
+bus = &"Ambience"
+
+[node name="Creepyambience2" type="AudioStreamPlayer" parent="AmbientSounds"]
+stream = ExtResource("206_lygv6")
+volume_db = -6.559
+bus = &"Ambience"
+
+[node name="AmbientSoundsTimer" type="Timer" parent="AmbientSounds"]
+wait_time = 30.0
 autostart = true
 
 [node name="TimerPower" type="Timer" parent="."]
@@ -1546,11 +1679,9 @@ autostart = true
 [connection signal="pressed" from="Office/UiPc/cam9button" to="Office" method="_on_cam_9_button_pressed"]
 [connection signal="mouse_entered" from="Office/Buttons/ButtonRightSide" to="Office" method="_on_button_right_side_mouse_entered"]
 [connection signal="mouse_entered" from="Office/Buttons/ButtonLeftSide" to="Office" method="_on_button_left_side_mouse_entered"]
-[connection signal="button_down" from="Office/Light" to="RoosterAi" method="_on_light_button_down"]
-[connection signal="button_down" from="Office/Light" to="Office" method="_on_light_button_down"]
-[connection signal="button_up" from="Office/Light" to="RoosterAi" method="_on_light_button_up"]
-[connection signal="button_up" from="Office/Light" to="Office" method="_on_light_button_up"]
-[connection signal="pressed" from="Office/Light" to="Office" method="_on_light_pressed"]
+[connection signal="button_down" from="Office/LightButton" to="RoosterAi" method="_on_light_button_button_down"]
+[connection signal="button_up" from="Office/LightButton" to="RoosterAi" method="_on_light_button_button_up"]
 [connection signal="timeout" from="TimerRooster" to="RoosterAi" method="_on_timer_rooster_timeout"]
 [connection signal="timeout" from="TimerRooster" to="Office" method="_on_timer_rooster_timeout"]
 [connection signal="timeout" from="TimerHour" to="Office" method="_on_timer_hour_timeout"]
+[connection signal="timeout" from="AmbientSounds/AmbientSoundsTimer" to="Office" method="_on_ambient_sounds_timer_timeout"]

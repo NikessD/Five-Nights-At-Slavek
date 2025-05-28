@@ -82,7 +82,7 @@ func Cam_Change():
 
 func _on_timer_rooster_timeout() -> void:
 		
-	print(animatronic_rooster_camera)
+
 	animatronic_random_number = randi_range(0, 20)
 	if animatronic_rooster_camera == 7:
 		cam_7()
@@ -173,7 +173,11 @@ func cam_7():
 		elif animatronic_rooster_door_var == 2:
 			animatronic_rooster_camera = 4
 	elif GlobalVars.light_button_is_pressed == false:
-			#Jumpscare animace
+			$"../Scream".play()
+			$"../Office/UiPc".set_visible(false)
+			$"../Office/Buttons".set_visible(false)
+			$"../Office/AnimationPlayerOffice".play("animation_jumpscare_left")
+			await get_tree().create_timer(0.7).timeout	
 			animatronic_random_number = 0
 			game_over = 1
 			get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
@@ -214,13 +218,19 @@ func cam_11():
 		elif animatronic_rooster_door_var == 2:
 			animatronic_rooster_camera = 4
 	elif GlobalVars.light_button_is_pressed == false:
-		#Jumpscare animace
+		$"../Scream".play()
+		$"../Office/UiPc".set_visible(false)
+		$"../Office/Buttons".set_visible(false)
+		$"../Office/AnimationPlayerOffice".play("animation_jumpscare_right")
+		await get_tree().create_timer(0.7).timeout	
 		animatronic_random_number = 0
 		game_over = 1
 		get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
+
 		
-		
-func _on_light_button_down() -> void:
+
+
+func _on_light_button_button_down() -> void:
 	$"../Office/PowerUse".value += 25 
 	$"../Office/FlashLightSound".play() 
 	GlobalVars.light_button_is_pressed = true
@@ -235,9 +245,9 @@ func _on_light_button_down() -> void:
 		$"../Office/AnimationPlayerOffice".play("animation_view_right_light")
 	else:
 		pass
-		
 
-func _on_light_button_up() -> void:
+
+func _on_light_button_button_up() -> void:
 	$"../Office/PowerUse".value -= 25
 	$"../Office/FlashLightSound".stop()
 	GlobalVars.light_button_is_pressed = false

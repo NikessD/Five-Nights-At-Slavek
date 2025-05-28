@@ -31,26 +31,32 @@ func _ready() -> void:
 	$AnimationPlayerOffice.play("animation_view_front")
 	GlobalVars.view_front = true
 	if GlobalVars.night == 1:
+		$Buttons.set_visible(false)
 		$Tutorial/camfed.set_visible(true)
 		await get_tree().create_timer(20).timeout
+		await get_tree().process_frame
 		$Tutorial/camfed.set_visible(false)
+		button_anim_tutorial()	
 
-
-
-
+func button_anim_tutorial():
+		$Buttons.set_visible(true)
+		await get_tree().create_timer(0.3).timeout
+		$Buttons.set_visible(false)
+		await get_tree().create_timer(0.3).timeout
+		$Buttons.set_visible(true)
+		await get_tree().create_timer(0.3).timeout
+		$Buttons.set_visible(false)
+		await get_tree().create_timer(0.3).timeout
+		$Buttons.set_visible(true)		
+		
 func _process(delta: float) -> void:
-	if GlobalVars.night == 1 and cam_view_first == 0:
-		cam_view_first = 1
-		$Tutorial/camfed.set_visible(true)
-		await get_tree().create_timer(20).timeout
-		$Tutorial/camfed.set_visible(false)
 	if hour == 6:
 		get_tree().change_scene_to_file("res://scenes/night_win_screen.tscn")
 	if GlobalVars.light_button_is_pressed == true:
-		power -= 0.01
+		power -= 0.015
 	if power > 0:
 		power -= 0.003
-	power = snapped(power,0.001)
+	power = snapped(power,0.001) 
 	$UiPc/Power.text = str(power) + " POWER"
 	
 	if power <= 0 and power_down_check == 0:
@@ -58,7 +64,7 @@ func _process(delta: float) -> void:
 		$UiPc.set_visible(false)
 		$Buttons.set_visible(false)
 		$PowerDownSound.play()
-		await get_tree().create_timer(10).timeout
+		await get_tree().create_timer(20/GlobalVars.night).timeout
 		get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 		
 
@@ -94,15 +100,17 @@ func _on_button_right_side_mouse_entered() -> void:
 			$Buttons.set_visible(false)
 			await get_tree().create_timer(0.4).timeout
 			$Buttons.set_visible(true)
-			$Light.set_visible(true)
+			$Buttons/ButtonRightSide.set_visible(false)
+			$LightButton.set_visible(true)
 
 	elif GlobalVars.view_left == true:
 		GlobalVars.view_front = true
 		GlobalVars.view_left = false
 		$AnimationPlayerOffice.play_backwards("animation_view_left")
-		$Light.set_visible(false)
+		$LightButton.set_visible(false)
 		$Buttons.set_visible(false)
 		await get_tree().create_timer(0.4).timeout
+		$Buttons/ButtonLeftSide.set_visible(true)
 		$Buttons.set_visible(true)
 		$UiPc.set_visible(true)
 
@@ -123,18 +131,21 @@ func _on_button_left_side_mouse_entered():
 		$Buttons.set_visible(false)
 		await get_tree().create_timer(0.4).timeout
 		$Buttons.set_visible(true)
-		$Light.set_visible(true)
+		$Buttons/ButtonLeftSide.set_visible(false)
+		$LightButton.set_visible(true)
+
 		
 	elif GlobalVars.view_right == true:
 		GlobalVars.view_front = true
 		GlobalVars.view_right = false
 		$AnimationPlayerOffice.play_backwards("animation_view_right")
-		$Light.set_visible(false)
+		$LightButton.set_visible(false)
 		$Buttons.set_visible(false)
 		await get_tree().create_timer(0.4).timeout
+		$Buttons/ButtonRightSide.set_visible(true)
 		$Buttons.set_visible(true)
 		$UiPc.set_visible(true)
-	
+
 	if GlobalVars.night == 1 and door_view_first == 0:
 		dvere_tutorial()
 
@@ -217,3 +228,17 @@ func _on_cam_9_button_pressed() -> void:
 	GlobalVars.camera_ID = 9
 	$CamSelected.play() 
 	get_node("../RoosterAi").Cam_Change()
+
+
+func _on_ambient_sounds_timer_timeout() -> void:
+	$"../AmbientSounds/Creepyambience2".play()
+	$"../AmbientSounds/Creepyambience1".play()
+	var random_ambient = randi_range(1,10)
+	if random_ambient == 1:
+		$"../AmbientSounds/Creepyambience1".volume_db = -18
+		$"../AmbientSounds/Creepyambience2".volume_db = -100000
+	elif random_ambient == 2:
+		$"../AmbientSounds/Creepyambience1".volume_db = -1000000
+		$"../AmbientSounds/Creepyambience2".volume_db = -7
+
+	
