@@ -23,8 +23,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="IntroLogo" type="Sprite2D" parent="PanelContainer"]
-position = Vector2(947, 527)
-scale = Vector2(1.48995, 1.54232)
+position = Vector2(968, 536)
+scale = Vector2(1.55856, 1.61334)
 texture = ExtResource("2_6qanq")
 
 [node name="Timer" type="Timer" parent="."]

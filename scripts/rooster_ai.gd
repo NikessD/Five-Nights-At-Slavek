@@ -174,6 +174,7 @@ func cam_7():
 			animatronic_rooster_camera = 4
 	elif GlobalVars.light_button_is_pressed == false:
 			$"../Scream".play()
+			$"../Office/LightButton".set_visible(false)
 			$"../Office/UiPc".set_visible(false)
 			$"../Office/Buttons".set_visible(false)
 			$"../Office/AnimationPlayerOffice".play("animation_jumpscare_left")
@@ -219,6 +220,7 @@ func cam_11():
 			animatronic_rooster_camera = 4
 	elif GlobalVars.light_button_is_pressed == false:
 		$"../Scream".play()
+		$"../Office/LightButton".set_visible(false)
 		$"../Office/UiPc".set_visible(false)
 		$"../Office/Buttons".set_visible(false)
 		$"../Office/AnimationPlayerOffice".play("animation_jumpscare_right")

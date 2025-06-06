@@ -234,10 +234,10 @@ func _on_ambient_sounds_timer_timeout() -> void:
 	$"../AmbientSounds/Creepyambience2".play()
 	$"../AmbientSounds/Creepyambience1".play()
 	var random_ambient = randi_range(1,10)
-	if random_ambient == 1:
+	if random_ambient == 8:
 		$"../AmbientSounds/Creepyambience1".volume_db = -18
 		$"../AmbientSounds/Creepyambience2".volume_db = -100000
-	elif random_ambient == 2:
+	elif random_ambient == 1:
 		$"../AmbientSounds/Creepyambience1".volume_db = -1000000
 		$"../AmbientSounds/Creepyambience2".volume_db = -7
 
