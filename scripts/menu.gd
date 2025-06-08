@@ -9,10 +9,25 @@ func _ready() -> void:
 		GlobalVars.config.save("res://save.cfg")
 	else:
 		GlobalVars.night = GlobalVars.config.get_value("night number", "night", GlobalVars.night)
-
+	
+	match GlobalVars.night:
+		1:
+			$BackGround.play("Night1")
+		2:
+			$BackGround.play("Night2")
+		3:
+			$BackGround.play("Night3")
+		4:
+			$BackGround.play("Night4")
+		5:
+			$BackGround.play("Night5")
+		6:
+			$BackGround.play("Night6")
+		
 	
 func _on_play_pressed() -> void:
 	load_night()
+	$"Caves-of-dawn-10376".stop()
 	$Menu/Background/MenuStatic.stop()
 	$StartButtonSound.play()
 	$LoadingScreen/NightNumber.text = "NIGHT " + str(GlobalVars.night)

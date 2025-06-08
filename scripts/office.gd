@@ -80,11 +80,11 @@ func _process(delta: float) -> void:
 	if GoldenS_anger >= 299:
 		get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 	if GoldenS_camera == GlobalVars.camera_clicked and GlobalVars.view_front == true:
-		$"UiPc/CamFeed/SlávekLinus-Kopie".set_visible(true)
+		$UiPc/CamFeed/GoldenRupraveno.set_visible(true)
 		GoldenS_anger = min(GoldenS_anger + 100 * delta, 300)
 	else:
 		GoldenS_anger = 0
-		$"UiPc/CamFeed/SlávekLinus-Kopie".set_visible(false)
+		$UiPc/CamFeed/GoldenRupraveno.set_visible(false)
 
 
 # Pravý pohyb hráče

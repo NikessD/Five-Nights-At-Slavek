@@ -1,17 +1,77 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhqcnvyxjgoh1"]
+[gd_scene load_steps=25 format=3 uid="uid://bhqcnvyxjgoh1"]
 
 [ext_resource type="Script" uid="uid://d1wf8cprrctva" path="res://scripts/menu.gd" id="1_v86rl"]
 [ext_resource type="AudioStream" uid="uid://deyb8ve2gmluo" path="res://sounds/click-button-140881.mp3" id="2_13sgg"]
+[ext_resource type="Texture2D" uid="uid://oldgmj4ljxi5" path="res://sprites/MenuBackgounds/Night1.png" id="2_70i5f"]
 [ext_resource type="Texture2D" uid="uid://cxlus75bm8ern" path="res://sprites/DefaultBackground_Kreslicí plátno 1.png" id="2_i6lef"]
+[ext_resource type="AudioStream" uid="uid://bexkcax18n2g1" path="res://sounds/Music/caves-of-dawn-10376.mp3" id="2_mxgkd"]
+[ext_resource type="Texture2D" uid="uid://dkhmbuux3fi32" path="res://sprites/MenuBackgounds/Night2.png" id="3_7jp70"]
+[ext_resource type="Texture2D" uid="uid://7xqgodfwsm00" path="res://sprites/Ricky'sLogo.png" id="3_70i5f"]
 [ext_resource type="AudioStream" uid="uid://byfsd0famoq8b" path="res://sounds/modern-button-click-291234.mp3" id="3_i6lef"]
 [ext_resource type="AudioStream" uid="uid://b5psk57q003qe" path="res://sounds/MenuStatic.mp3" id="4_70i5f"]
+[ext_resource type="Texture2D" uid="uid://yob4vtgoykw" path="res://sprites/MenuBackgounds/Night3.png" id="4_mxgkd"]
+[ext_resource type="Texture2D" uid="uid://bl2hg57w2ql6s" path="res://sprites/MenuBackgounds/Night4.png" id="5_g6gyw"]
 [ext_resource type="Texture2D" uid="uid://b471kuyokmikb" path="res://sprites/PNUS_LOGO_Kreslicí plátno 1.png" id="5_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://b3s5n42dn6lr2" path="res://sprites/MenuBackgounds/Night5.png" id="6_3dmrc"]
 [ext_resource type="FontFile" uid="uid://mou5bhoqqbqj" path="res://fonts/LcdSolid-VPzB.ttf" id="6_13sgg"]
 [ext_resource type="AudioStream" uid="uid://cr2upuxd6n6da" path="res://sounds/lazerius-139178.mp3" id="7_6cdou"]
+[ext_resource type="Texture2D" uid="uid://dho7v3ae3mrgg" path="res://sprites/MenuBackgounds/Night6.png" id="7_81l6r"]
+[ext_resource type="Texture2D" uid="uid://kpje6fy77mvd" path="res://sprites/azimuth/AZIMUTH-05.png" id="9_i6lef"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_11y2r"]
 
 [sub_resource type="Theme" id="Theme_o0tnf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6lef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_70i5f")
+}],
+"loop": true,
+"name": &"Night1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7jp70")
+}],
+"loop": true,
+"name": &"Night2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mxgkd")
+}],
+"loop": true,
+"name": &"Night3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_g6gyw")
+}],
+"loop": true,
+"name": &"Night4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3dmrc")
+}],
+"loop": true,
+"name": &"Night5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_81l6r")
+}],
+"loop": true,
+"name": &"Night6",
+"speed": 5.0
+}]
 
 [sub_resource type="Theme" id="Theme_b6cxs"]
 
@@ -37,15 +97,33 @@ size_flags_vertical = 3
 theme = SubResource("Theme_o0tnf")
 script = ExtResource("1_v86rl")
 
-[node name="DefaultBackgroundKreslicíPlátno1" type="Sprite2D" parent="."]
-position = Vector2(964, 542)
-scale = Vector2(1.04062, 1.03519)
-texture = ExtResource("2_i6lef")
+[node name="Caves-of-dawn-10376" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mxgkd")
+volume_db = -20.613
+pitch_scale = 0.9
+autoplay = true
+parameters/looping = true
+
+[node name="BackGround" type="AnimatedSprite2D" parent="."]
+position = Vector2(969.735, 541.5)
+scale = Vector2(1.02367, 1.01944)
+sprite_frames = SubResource("SpriteFrames_i6lef")
+animation = &"Night1"
 
 [node name="Menu" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Ricky\'sLogo" type="Sprite2D" parent="Menu"]
+position = Vector2(310, 167.5)
+scale = Vector2(0.300926, 0.300926)
+texture = ExtResource("3_70i5f")
+
+[node name="Azimuth-05" type="Sprite2D" parent="Menu"]
+position = Vector2(1848, 985)
+scale = Vector2(0.070051, 0.070051)
+texture = ExtResource("9_i6lef")
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="Menu"]
 stream = ExtResource("2_13sgg")
@@ -69,7 +147,6 @@ offset_bottom = 40.0
 [node name="MenuStatic" type="AudioStreamPlayer" parent="Menu/Background"]
 stream = ExtResource("4_70i5f")
 volume_db = -12.609
-autoplay = true
 mix_target = 1
 
 [node name="MenuButtons" type="VBoxContainer" parent="Menu"]
@@ -113,6 +190,7 @@ text = "QUIT"
 flat = true
 
 [node name="FnasLogo" type="Sprite2D" parent="Menu"]
+visible = false
 position = Vector2(216, 296)
 scale = Vector2(0.179951, 0.179951)
 texture = ExtResource("5_mj5lg")
@@ -124,13 +202,18 @@ offset_top = 1053.0
 offset_right = 1918.0
 offset_bottom = 1076.0
 theme_override_fonts/font = ExtResource("6_13sgg")
-text = "VER - 0.6.5"
+text = "VER - 0.7.0"
 
 [node name="LoadingScreen" type="Control" parent="."]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="DefaultBackgroundKreslicíPlátno1" type="Sprite2D" parent="LoadingScreen"]
+position = Vector2(972, 535)
+scale = Vector2(1.03125, 1.05)
+texture = ExtResource("2_i6lef")
 
 [node name="NightNumber" type="Label" parent="LoadingScreen"]
 layout_mode = 0
@@ -157,12 +240,17 @@ offset_top = 1011.0
 offset_right = 47.0
 offset_bottom = 1051.0
 
+[node name="DefaultBackgroundKreslicíPlátno1" type="Sprite2D" parent="Settings"]
+position = Vector2(955, -468)
+scale = Vector2(1.02396, 1.03704)
+texture = ExtResource("2_i6lef")
+
 [node name="Exit" type="Button" parent="Settings"]
 layout_mode = 0
-offset_left = 92.0
-offset_top = -33.0
-offset_right = 222.0
-offset_bottom = 26.0
+offset_left = 2.0
+offset_top = -31.0
+offset_right = 188.0
+offset_bottom = 64.0
 focus_mode = 0
 theme_override_fonts/font = SubResource("SystemFont_i6lef")
 theme_override_font_sizes/font_size = 50

@@ -10,12 +10,13 @@ config_version=5
 
 [application]
 
-config/name="FNAS"
-run/main_scene="uid://bwblblykw5b4u"
+config/name="Welcome To Ricky's"
+run/main_scene="uid://bhqcnvyxjgoh1"
 config/features=PackedStringArray("4.4")
 run/max_fps=60
-boot_splash/show_image=false
+boot_splash/image="uid://kpje6fy77mvd"
 config/icon="uid://b471kuyokmikb"
+boot_splash/minimum_display_time=2000
 
 [audio]
 
